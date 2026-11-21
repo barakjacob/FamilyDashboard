@@ -35,6 +35,13 @@
   #night { position: absolute; inset: 0; width: 1280px; height: 800px; background: #0E0C1C; color: #A9A2C6; overflow: hidden; }
   .star { position: absolute; border-radius: 999px; animation: tw 6s ease-in-out infinite; }
   @keyframes tw { 0%, 100% { opacity: .25 } 50% { opacity: .85 } }
+  #newsFull { position: absolute; inset: 0; z-index: 10; background: rgba(14,12,28,.82); display: flex; align-items: center; justify-content: center; }
+  #newsFull .sheet { width: 1040px; max-height: 720px; overflow-y: auto; padding: 28px 40px; border-radius: 18px; box-sizing: border-box; }
+  #newsFull h2 { margin: 0 0 4px; font-size: 26px; }
+  #newsFull .st { margin: 16px 0 0; padding-top: 12px; border-top: 1px solid #D8C9A6; font-size: 18px; line-height: 1.35; }
+  #newsFull .st b { font-size: 20px; }
+  #newsFull .lbl { font-family: Cinzel, serif; font-size: 12px; letter-spacing: .14em; color: #7A5C12; margin-right: 6px; }
+  #newsFull .src { font-size: 14px; color: #6B5636; font-style: italic; }
 </style>
 </head>
 <body>
@@ -57,6 +64,7 @@
         <div id="todayLabel" class="label">TODAY</div>
         <div id="today" style="display: flex; flex-direction: column; gap: 10px"></div>
       </div>
+      <div id="news"></div>
     </section>
 
     <section class="col-r">
@@ -80,6 +88,8 @@
       </div>
     </section>
   </div>
+
+  <div id="newsFull" class="hidden"></div>
 
   <div id="night" class="hidden">
     <div id="stars"></div>
@@ -252,6 +262,7 @@ function render() {
   renderBins(now, mins);
   renderStocks();
   renderToday(now, mins);
+  renderNews(now);
   renderF1(now);
   renderFantasy();
   renderTtc(now);
@@ -795,6 +806,56 @@ function sleeperSummary(league, want, week, matchups, rosters, users, myId, proj
 }
 
 
+
+// ------------------------------------------------------------ news brief (news.json, written twice a day by a Claude scheduled task)
+var NEWS = null;
+function loadNews() {
+  fetch('news.json?t=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error('news ' + r.status); return r.json(); })
+    .then(function (j) { NEWS = j; if (DATA) render(); }, function (err) { console.log('News: ' + err); });
+}
+function newsFresh(now) {
+  return NEWS && NEWS.stories && NEWS.stories.length && (!NEWS.generated || now - new Date(NEWS.generated).getTime() < 16 * 3600e3);
+}
+function renderNews(now) {
+  var el = $('news');
+  if (!newsFresh(now)) { el.innerHTML = ''; return; }
+  var when = NEWS.generated ? hm(new Date(NEWS.generated).getTime()) : '';
+  el.innerHTML = '<div class="box" id="newsBox" style="padding: 10px 16px; display: flex; flex-direction: column; gap: 5px; cursor: pointer">' +
+    '<div class="row" style="justify-content: space-between; align-items: baseline">' +
+      '<span class="label" style="font-size: 13px">' + esc(String(NEWS.edition || 'News').toUpperCase()) + ' BRIEF</span>' +
+      '<span class="muted" style="font-size: 13px">' + esc(when) + ' · tap to read</span></div>' +
+    NEWS.stories.slice(0, 3).map(function (s) {
+      return '<div class="row" style="gap: 8px; font-size: 17px; line-height: 1.25">' +
+        '<span style="color: #C9B37E; flex: none">•</span>' +
+        '<span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">' +
+          (s.update ? '<span style="color: #C9B37E">Update: </span>' : '') + esc(s.board || s.headline) + '</span></div>';
+    }).join('') + '</div>';
+  $('newsBox').onclick = openNews;
+}
+function openNews() {
+  if (!NEWS) return;
+  var el = $('newsFull');
+  var line = function (label, text) { return text ? '<div><span class="lbl">' + label + '</span>' + esc(text) + '</div>' : ''; };
+  el.innerHTML = '<div class="sheet parch">' +
+    '<h2 class="cz">' + esc(NEWS.title || 'News brief') + '</h2>' +
+    '<div class="src">' + (NEWS.generated ? 'Written ' + esc(short(new Date(NEWS.generated).getTime())) + ' · ' : '') + 'tap anywhere to close</div>' +
+    (NEWS.stories || []).map(function (s) {
+      return '<div class="st"><b>' + (s.update ? 'Update: ' : '') + esc(s.headline || s.board) + '</b>' +
+        line('WHAT', s.what) + line('WHY IT MATTERS', s.why) + line('BOTH SIDES', s.sides) +
+        ((s.sources || []).length ? '<div class="src">Sources: ' + s.sources.map(function (x) { return esc(x.name || x.url); }).join(', ') + '</div>' : '') +
+        '</div>';
+    }).join('') +
+    ((NEWS.quick_hits || []).length ? '<div class="st"><b>Quick hits:</b>' + NEWS.quick_hits.map(function (q) { return '<div>• ' + esc(q) + '</div>'; }).join('') + '</div>' : '') +
+    (NEWS.big_picture ? '<div class="st"><b>Big picture today:</b> ' + esc(NEWS.big_picture) + '</div>' : '') +
+    '</div>';
+  if (ART.parchment) el.querySelector('.sheet').style.background = '#F1E6CC url(' + ART.parchment + ') center / cover';
+  el.className = '';
+  el.onclick = function () { el.className = 'hidden'; };
+  setTimeout(function () { el.className = 'hidden'; }, 3 * 60 * 1000);   // closes itself after 3 minutes
+}
+loadNews();
+setInterval(loadNews, 10 * 60 * 1000);
 // ============================================================ end Toronto add-ons
 
 // First run: ask for the board link.
