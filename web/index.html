@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-CA">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,6 +50,7 @@
         <div id="clock" class="cz" style="font-size: 116px; line-height: 1; font-weight: 500"></div>
       </div>
       <div id="weather" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"></div>
+      <div id="stocks"></div>
       <div id="drive"></div>
       <div id="binsTonight"></div>
       <div style="display: flex; flex-direction: column; gap: 10px; flex: 1; min-height: 0; overflow: hidden">
@@ -59,6 +60,7 @@
     </section>
 
     <section class="col-r">
+      <div id="fantasy"></div>
       <div id="f1"></div>
       <div id="weekPanel" class="parch" style="position: relative; flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 18px 28px 18px 40px; border-radius: 16px; min-height: 0">
         <div class="row" style="justify-content: space-between; align-items: baseline">
@@ -72,6 +74,7 @@
         </div>
       </div>
       <div class="row" style="gap: 14px; align-items: stretch">
+        <div id="ttc" class="grow" style="display: flex; flex-direction: column; gap: 10px"></div>
         <div id="bus" class="box" style="width: 236px; flex: none; padding: 16px 18px; border-radius: 14px; display: flex; flex-direction: column; gap: 6px"></div>
         <div id="diesel" class="box grow" style="padding: 16px 18px; border-radius: 14px; display: flex; flex-direction: column; gap: 6px"></div>
       </div>
@@ -113,7 +116,7 @@ var REFRESH_MS = 120000;
 
 // Background artwork (made with Higgsfield, see docs/design.md). Swap any of these for your own:
 // point ASSET_BASE at your own copy, or replace a single URL. Leave one '' to use plain colours.
-var ASSET_BASE = 'https://cdn.jsdelivr.net/gh/stewie1308-ui/FamilyDashboard@main/assets/art/';
+var ASSET_BASE = '../assets/art/';   // your own fork's copy (GitHub Pages serves it next to web/)
 var ART = {
   parchment: ASSET_BASE + 'parchment.png',       // the cream panels
   nightSky: ASSET_BASE + 'night-sky.png',        // night mode
@@ -123,6 +126,9 @@ var ART = {
 
 // Higgsfield icon set (bold filled glyphs, 1024 grid), tinted with currentColor.
 var HFICONS = {"dinner":"<g fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M834 512a312 312 0 1 1-624 0 312 312 0 1 1 624 0Zm-78 0a234 234 0 1 0-468 0 234 234 0 1 0 468 0Z\"/><path d=\"M77 144a20 20 0 0 1 40 0v188h14V144a20 20 0 0 1 40 0v188h14V144a20 20 0 0 1 40 0v212c0 44-17 72-46 88v420a36 36 0 0 1-72 0V444c-29-16-30-44-30-88Z\"/><path d=\"M947 144v720a36 36 0 0 1-72 0V535h-23c-16 0-26-12-26-28V335c0-91 32-162 83-204 17-14 38-7 38 13Z\"/></g>","cat":"<g fill=\"currentColor\"><path d=\"M590 812C653 861 769 861 824 797C864 750 871 683 839 649C819 628 790 635 782 662C775 685 750 696 729 686C705 675 704 649 714 625C738 565 814 544 870 585C949 642 948 760 892 839C831 926 705 947 600 909C567 897 559 865 574 838Z\"/><path fill-rule=\"evenodd\" d=\"M234 82C238 69 250 70 261 80L365 169C422 150 502 150 560 170L667 80C679 70 691 73 694 88L724 266C751 311 754 355 735 396C717 436 680 462 635 478C659 532 690 597 706 664C723 731 724 794 705 850C695 883 673 910 635 918C594 928 546 925 515 921C484 925 438 928 397 919C363 924 321 924 287 913C238 897 219 859 225 808C232 742 259 686 286 634C311 584 325 532 328 480C267 465 220 437 198 393C179 354 184 307 207 266ZM339 311C319 311 304 328 304 350C304 372 319 389 339 389C359 389 374 372 374 350C374 328 359 311 339 311ZM587 311C567 311 552 328 552 350C552 372 567 389 587 389C607 389 622 372 622 350C622 328 607 311 587 311Z\"/></g>","car":"<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M94 326H264Q278 326 278 340V382Q278 396 264 396H224V475L257 483Q294 472 328 488L390 417Q400 405 416 405H449Q461 405 465 417L485 475H540Q554 475 564 485L588 509L850 552V526Q850 512 864 512H923Q938 512 938 527V635Q938 650 923 650H851Q825 704 766 704Q707 704 679 650H377Q347 714 278 714Q209 714 179 650H96Q82 650 82 636V608Q82 594 96 594H157Q157 529 198 497V396H94Q80 396 80 382V340Q80 326 94 326ZM278 558A42 42 0 1 0 278 642A42 42 0 1 0 278 558ZM766 561A39 39 0 1 0 766 639A39 39 0 1 0 766 561Z\"/>","candle":"<g fill=\"currentColor\"><path d=\"M720 214C694 195 690 168 705 145C717 127 741 119 754 105C765 93 765 80 758 69C783 73 801 91 800 112C799 141 771 155 752 167C737 177 737 188 747 199C759 213 736 226 720 214Z\"/><path fill-rule=\"evenodd\" d=\"M94 540L478 248Q511 222 544 248L665 342V274Q665 254 685 254H755Q775 254 775 274V427L930 548Q956 568 942 592Q935 606 914 606H839V895Q839 929 805 929H485V727C485 679 462 652 424 652C386 652 363 679 363 727V929H219Q185 929 185 895V606H111Q87 606 79 584Q70 558 94 540ZM614 628Q594 628 594 648V754Q594 774 614 774H720Q740 774 740 754V648Q740 628 720 628Z\"/></g>","bin":"<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M145 211 637 86Q654 82 670 90L832 166Q850 174 850 194V223H865Q903 223 903 261V340Q903 367 876 367H823L777 772Q828 794 841 847C856 906 813 953 757 953Q706 953 680 909L362 866Q335 862 330 832L247 338 149 291Q129 282 129 261V235Q129 216 145 211ZM807 270 795 319H855V270ZM208 259 279 292 770 225 722 202ZM758 827A38 38 0 1 0 758 903 38 38 0 1 0 758 827Z\"/>","sun":"<g fill=\"currentColor\"><circle cx=\"512\" cy=\"512\" r=\"222\"/><rect x=\"464\" y=\"77\" width=\"96\" height=\"160\" rx=\"48\"/><rect x=\"464\" y=\"787\" width=\"96\" height=\"160\" rx=\"48\"/><rect x=\"77\" y=\"464\" width=\"160\" height=\"96\" rx=\"48\"/><rect x=\"787\" y=\"464\" width=\"160\" height=\"96\" rx=\"48\"/><rect x=\"464\" y=\"77\" width=\"96\" height=\"160\" rx=\"48\" transform=\"rotate(45 512 512)\"/><rect x=\"464\" y=\"77\" width=\"96\" height=\"160\" rx=\"48\" transform=\"rotate(135 512 512)\"/><rect x=\"464\" y=\"77\" width=\"96\" height=\"160\" rx=\"48\" transform=\"rotate(225 512 512)\"/><rect x=\"464\" y=\"77\" width=\"96\" height=\"160\" rx=\"48\" transform=\"rotate(315 512 512)\"/></g>","moon":"<g fill=\"currentColor\"><path d=\"M552 81C288 67 80 264 80 510C80 751 275 944 516 944C679 944 825 853 897 715C905 699 888 683 873 692C817 725 757 741 693 741C504 741 351 588 351 399C351 281 412 173 558 107C574 100 570 82 552 81Z\"/><path d=\"M781 179C785 165 801 165 805 179L828 250C832 263 841 272 854 276L925 299C939 303 939 319 925 323L854 346C841 350 832 359 828 372L805 443C801 457 785 457 781 443L758 372C754 359 745 350 732 346L661 323C647 319 647 303 661 299L732 276C745 272 754 263 758 250Z\"/></g>","cloud":"<path fill=\"currentColor\" d=\"M256 768C157 768 77 688 77 589C77 490 157 410 256 410C272 410 288 412 303 416C319 310 408 232 516 232C633 232 729 324 734 440C747 437 761 435 775 435C870 435 947 509 947 602C947 694 873 768 781 768Z\"/>","rain":"<g fill=\"currentColor\"><path d=\"M253 607C155 607 76 530 76 435C76 345 144 271 232 262C260 157 353 85 462 85C579 85 678 166 702 276C723 267 747 262 771 262C869 262 948 339 948 435C948 530 869 607 771 607Z\"/><path d=\"M288 665C279 665 273 674 261 691C239 723 208 764 208 795C208 839 244 873 288 873C332 873 368 839 368 795C368 764 337 723 315 691C303 674 297 665 288 665Z\"/><path d=\"M512 731C503 731 497 740 485 757C463 789 432 830 432 861C432 905 468 939 512 939C556 939 592 905 592 861C592 830 561 789 539 757C527 740 521 731 512 731Z\"/><path d=\"M736 665C727 665 721 674 709 691C687 723 656 764 656 795C656 839 692 873 736 873C780 873 816 839 816 795C816 764 785 723 763 691C751 674 745 665 736 665Z\"/></g>","snow":"<g fill=\"currentColor\"><path d=\"M260 606C159 606 78 532 78 437C78 347 145 276 234 267C261 174 343 110 441 110C550 110 641 186 660 289C686 272 716 263 748 263C816 263 872 307 889 368C924 393 946 432 946 477C946 549 888 606 816 606Z\"/><g transform=\"translate(294 746)\"><rect x=\"-18\" y=\"-72\" width=\"36\" height=\"144\" rx=\"18\"/><rect x=\"-18\" y=\"-72\" width=\"36\" height=\"144\" rx=\"18\" transform=\"rotate(60)\"/><rect x=\"-18\" y=\"-72\" width=\"36\" height=\"144\" rx=\"18\" transform=\"rotate(120)\"/></g><g transform=\"translate(512 842)\"><rect x=\"-18\" y=\"-72\" width=\"36\" height=\"144\" rx=\"18\"/><rect x=\"-18\" y=\"-72\" width=\"36\" height=\"144\" rx=\"18\" transform=\"rotate(60)\"/><rect x=\"-18\" y=\"-72\" width=\"36\" height=\"144\" rx=\"18\" transform=\"rotate(120)\"/></g><g transform=\"translate(730 746)\"><rect x=\"-18\" y=\"-72\" width=\"36\" height=\"144\" rx=\"18\"/><rect x=\"-18\" y=\"-72\" width=\"36\" height=\"144\" rx=\"18\" transform=\"rotate(60)\"/><rect x=\"-18\" y=\"-72\" width=\"36\" height=\"144\" rx=\"18\" transform=\"rotate(120)\"/></g></g>","fog":"<g fill=\"currentColor\"><path d=\"M252 566C155 566 77 493 77 402C77 313 147 241 236 237C266 147 350 85 449 85C565 85 663 169 681 279C706 266 734 259 764 259C865 259 947 328 947 417C947 501 876 566 783 566Z\"/><rect x=\"119\" y=\"639\" width=\"786\" height=\"114\" rx=\"57\"/><rect x=\"177\" y=\"826\" width=\"670\" height=\"114\" rx=\"57\"/></g>","storm":"<g fill=\"currentColor\"><path d=\"M250 568C150 568 76 501 76 410C76 328 135 263 214 252C227 154 310 80 410 80C501 80 579 141 603 224C625 211 651 204 678 204C751 204 812 254 827 322C897 329 948 379 948 444C948 515 892 568 820 568Z\"/><path d=\"M460 624H624Q643 624 633 642L558 760H668Q692 760 675 779L469 938Q447 955 454 927L491 816H387Q368 816 377 798L440 637Q445 624 460 624Z\"/></g>","frost":"<g fill=\"currentColor\"><path d=\"M468 512V334L346 264Q318 248 334 220Q350 192 378 208L468 260V121A44 44 0 0 1 556 121V260L646 208Q674 192 690 220Q706 248 678 264L556 334V512Z\"/><path transform=\"rotate(60 512 512)\" d=\"M468 512V334L346 264Q318 248 334 220Q350 192 378 208L468 260V121A44 44 0 0 1 556 121V260L646 208Q674 192 690 220Q706 248 678 264L556 334V512Z\"/><path transform=\"rotate(120 512 512)\" d=\"M468 512V334L346 264Q318 248 334 220Q350 192 378 208L468 260V121A44 44 0 0 1 556 121V260L646 208Q674 192 690 220Q706 248 678 264L556 334V512Z\"/><path transform=\"rotate(180 512 512)\" d=\"M468 512V334L346 264Q318 248 334 220Q350 192 378 208L468 260V121A44 44 0 0 1 556 121V260L646 208Q674 192 690 220Q706 248 678 264L556 334V512Z\"/><path transform=\"rotate(240 512 512)\" d=\"M468 512V334L346 264Q318 248 334 220Q350 192 378 208L468 260V121A44 44 0 0 1 556 121V260L646 208Q674 192 690 220Q706 248 678 264L556 334V512Z\"/><path transform=\"rotate(300 512 512)\" d=\"M468 512V334L346 264Q318 248 334 220Q350 192 378 208L468 260V121A44 44 0 0 1 556 121V260L646 208Q674 192 690 220Q706 248 678 264L556 334V512Z\"/></g>","bus":"<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M260 77H764Q884 77 884 197V799Q884 852 832 865V915Q832 947 800 947H736Q704 947 704 915V869H320V915Q320 947 288 947H224Q192 947 192 915V865Q140 852 140 799V197Q140 77 260 77ZM294 141Q270 141 270 165V193Q270 217 294 217H730Q754 217 754 193V165Q754 141 730 141ZM232 269Q204 269 204 297V566Q204 594 232 594H792Q820 594 820 566V297Q820 269 792 269ZM264 683A48 48 0 1 0 264 779A48 48 0 1 0 264 683ZM760 683A48 48 0 1 0 760 779A48 48 0 1 0 760 683Z\"/>","fuel":"<g fill=\"currentColor\"><path fill-rule=\"evenodd\" d=\"M226 78H550Q622 78 622 150V858H658Q690 858 690 890V914Q690 946 658 946H110Q78 946 78 914V890Q78 858 110 858H146V158Q146 78 226 78ZM250 182Q234 182 234 198V366Q234 382 250 382H518Q534 382 534 366V198Q534 182 518 182Z\"/><path d=\"M600 438H654Q762 438 762 546V724Q762 772 810 772Q858 772 858 724V410H837Q813 410 813 386V310L733 230Q711 208 733 186L747 172Q769 150 791 172L925 306Q946 327 946 357V724Q946 860 810 860Q674 860 674 724V546Q674 526 654 526H600Z\"/></g>","alert":"<path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M455 126C480 83 544 83 569 126L939 789C965 835 932 891 879 891H145C92 891 59 835 85 789ZM483 349C471 349 461 359 462 371L474 608C475 621 484 630 497 630H527C540 630 549 621 550 608L562 371C563 359 553 349 541 349ZM512 681A53 53 0 1 0 512 787A53 53 0 1 0 512 681Z\"/>"};
+// Extra icons for the Toronto add-ons
+HFICONS.ball = '<g fill="none" stroke="currentColor" stroke-width="64"><circle cx="512" cy="512" r="410"/><path d="M102 512h820M512 102v820M240 222c140 160 140 420 0 580M784 222c-140 160-140 420 0 580"/></g>';
+HFICONS.stocks = '<g fill="none" stroke="currentColor" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"><path d="M130 870h780"/><path d="M180 700l220-230 160 140 290-330"/><path d="M640 280h210v210"/></g>';
 
 // The racing car is wide and flat, so zoom it in to fill its badge.
 var HFVIEW = { car: '80 91 858 858' };
@@ -160,9 +166,9 @@ function svgFallback(n, c, s) { return svg(n, c, s); }
 function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 function $(id) { return document.getElementById(id); }
 
-// ------------------------------------------------------------ time helpers (London)
+// ------------------------------------------------------------ time helpers (Toronto)
 function parts(ms) {
-  var f = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', weekday: 'long', day: 'numeric', month: 'long',
+  var f = new Intl.DateTimeFormat('en-GB', { timeZone: 'America/Toronto', weekday: 'long', day: 'numeric', month: 'long',
     year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: false });
   var o = {};
   f.formatToParts(new Date(ms)).forEach(function (p) { o[p.type] = p.value; });
@@ -170,10 +176,10 @@ function parts(ms) {
   return o;
 }
 function dayKey(ms) { var p = parts(ms); return p.year + '-' + p.month + '-' + p.day; }
-function isoKey(ms) { return new Date(ms).toLocaleDateString('en-CA', { timeZone: 'Europe/London' }); }
+function isoKey(ms) { return new Date(ms).toLocaleDateString('en-CA', { timeZone: 'America/Toronto' }); }
 function hm(ms) { var p = parts(ms); return p.h + ':' + (p.m < 10 ? '0' : '') + p.m; }
 function short(ms) {
-  return new Date(ms).toLocaleString('en-GB', { timeZone: 'Europe/London', weekday: 'short', day: 'numeric', month: 'short',
+  return new Date(ms).toLocaleString('en-GB', { timeZone: 'America/Toronto', weekday: 'short', day: 'numeric', month: 'short',
     hour: '2-digit', minute: '2-digit', hour12: false }).replace(',', '');
 }
 function minutesOfDay(ms) { var p = parts(ms); return p.h * 60 + p.m; }
@@ -244,8 +250,11 @@ function render() {
 
   renderDrive(now);
   renderBins(now, mins);
+  renderStocks();
   renderToday(now, mins);
   renderF1(now);
+  renderFantasy();
+  renderTtc(now);
   renderWeek(now);
   renderBus(now);
   renderDiesel();
@@ -306,6 +315,21 @@ function renderToday(now, mins) {
   }
   if (DATA.bins && DATA.bins.tomorrow && mins < 17 * 60) {
     rows.push(evRow(DATA.bins.tomorrow.label + ' out', 'Bins', 'Tonight', '#7A5C12', '#EFE4C6', 'bin'));
+  }
+  var g = NBA;
+  if (g) {
+    var title = (clientCfg().NBA_NAME || 'Blazers') + (g.home ? ' vs ' : ' @ ') + g.opp;
+    var score = g.us + '–' + g.them, who, time;
+    if (g.state === 'in') { who = g.detail || 'Live'; time = score; }
+    else if (g.state === 'post') { who = g.detail || 'Final'; time = g.done ? (g.us > g.them ? 'W ' : 'L ') + score : ''; }
+    else { who = 'Tip-off'; time = hm(g.start); }
+    var p = g.player, line = '';
+    if (p) {
+      var bits = p.dnp ? [p.dnp] : [p.pts + ' PTS', p.reb + ' REB', p.ast + ' AST'].concat(p.threes ? [p.threes + ' 3PT'] : []);
+      line = '<div class="muted" style="font-size: 14px; margin: 4px 0 0 58px">' +
+        esc((clientCfg().NBA_PLAYER || '') + ' · ' + bits.join(' · ')) + '</div>';
+    }
+    rows.push('<div>' + evRow(title, who, time, '#B03A3A', '#F3DDDD', 'ball') + line + '</div>');
   }
   var evs = (DATA.calendar && DATA.calendar.events) || [];
   evs.filter(function (e) { return dayKey(e.start) === today && (e.allDay || e.end > now); })
@@ -464,16 +488,16 @@ function nextMorningLow(w, now) {
 // ------------------------------------------------------------ data + loop
 function load() {
   if (window.google && google.script && google.script.run) {
-    google.script.run.withSuccessHandler(function (d) { DATA = d; render(); })
+    google.script.run.withSuccessHandler(function (d) { DATA = d; render(); startClientFeeds(); })
       .withFailureHandler(function () { /* keep showing the last data; try again next round */ })
       .getBoardData(BOARD_KEY);
   } else if (API_URL) {
     fetch(API_URL + '?api=1&k=' + encodeURIComponent(BOARD_KEY))
       .then(function (r) { return r.json(); })
-      .then(function (d) { if (d && !d.error) { DATA = d; render(); } })
+      .then(function (d) { if (d && !d.error) { DATA = d; render(); startClientFeeds(); } })
       .catch(function () { /* keep the last data; try again next round */ });
   } else if (window.SAMPLE_DATA) {
-    DATA = window.SAMPLE_DATA; render();
+    DATA = window.SAMPLE_DATA; render(); startClientFeeds();
   }
 }
 function fit() {
@@ -506,6 +530,272 @@ setInterval(render, 15000);
 setInterval(load, REFRESH_MS);
 // Reload the whole page once a night to clear memory on the old tablet.
 setInterval(function () { var m = minutesOfDay(Date.now()); if (m === 4 * 60) location.reload(); }, 60000);
+
+
+// ============================================================ Toronto add-ons
+// Personal settings (Sleeper username, league IDs, NBA team) come from Config.gs → CLIENT,
+// delivered with the board data, so this public page contains nothing personal.
+function clientCfg() { return (DATA && DATA.client) || {}; }
+var CLIENT_STARTED = false;
+function startClientFeeds() {
+  if (CLIENT_STARTED) return;
+  CLIENT_STARTED = true;
+  loadNba(); loadFantasy();
+  setInterval(loadNba, 2 * 60 * 1000);
+  setInterval(loadFantasy, 2 * 60 * 1000);
+}
+
+function renderTtc(now) {
+  var a = DATA.ttc, el = $('ttc');
+  if (!a) { el.innerHTML = ''; return; }
+  if (!a.length) {
+    el.innerHTML = '<div class="box row" style="gap: 14px; padding: 10px 18px; border-radius: 14px">' +
+      svg('bus', '#C9B37E', 20, 1.6) +
+      '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: #C9B37E">TTC</span>' +
+      '<span class="muted" style="font-size: 15px">Your lines are running normally</span></div>';
+    return;
+  }
+  el.innerHTML = a.map(function (x) {
+    var urgent = !x.planned;
+    var tag = x.routes.map(function (r) { return /^\d$/.test(r) ? 'Line ' + r : r; }).join(' · ');
+    var when = x.planned ? 'Planned · from ' + short(x.start) : 'Now';
+    return '<div class="box row" style="gap: 14px; padding: 10px 18px; border-radius: 14px;' +
+        (urgent ? ' border: 2px solid #C9A44C' : '') + '">' +
+      '<span class="badge" style="width: 38px; height: 38px; background: ' + (urgent ? '#F3DDE7' : '#EFE4C6') + '">' +
+        svg('alert', urgent ? '#B03A6F' : '#7A5C12', 24) + '</span>' +
+      '<div class="grow" style="display: flex; flex-direction: column; min-width: 0">' +
+        '<span class="cz" style="font-size: 15px; letter-spacing: .12em">TTC · ' + esc(tag.toUpperCase()) + '</span>' +
+        '<span class="muted" style="font-size: 15px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden">' +
+          esc(x.text) + '</span></div>' +
+      '<span class="muted" style="font-size: 13px; white-space: nowrap">' + esc(when) + '</span></div>';
+  }).join('');
+}
+
+function renderStocks() {
+  var s = DATA.stocks, el = $('stocks');
+  if (!s || !s.length) { el.innerHTML = ''; return; }
+  el.innerHTML = '<div class="box row" style="gap: 18px; padding: 8px 16px; align-items: center">' +
+    svg('stocks', '#C9B37E', 22) +
+    '<div class="row grow" style="gap: 22px; justify-content: space-around">' +
+    s.map(function (x) {
+      var up = x.change >= 0, col = up ? '#7BC47F' : '#E57373';
+      return '<span class="row" style="gap: 8px; align-items: baseline; white-space: nowrap">' +
+        '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: #C9B37E">' + esc(x.label) + '</span>' +
+        '<span class="cz" style="font-size: 19px">' + x.price.toFixed(2) + '</span>' +
+        '<span style="font-size: 14px; color: ' + col + '">' + (up ? '▲ ' : '▼ ') + Math.abs(x.change).toFixed(2) + '%</span></span>';
+    }).join('') + '</div></div>';
+}
+
+function renderFantasy() {
+  var el = $('fantasy'), list = FANTASY || [];
+  if (!list.length) { el.innerHTML = ''; return; }
+  var n = function (v) { return v == null ? '–' : (Math.round(v * 10) / 10).toFixed(1); };
+  var GOLD = '#C9B37E', TEXT = '#F3E9D2', SOFT = '#A9A2C6';
+  var RED = '#E57373', AMBER = '#E3B341', GREEN = '#7BC47F';
+
+  var cells = list.map(function (f) {
+    var score, proj = '', ctx = '', color = TEXT, ctxColor = SOFT;
+    if (f.out) { score = 'Out'; ctx = 'Eliminated'; color = ctxColor = RED; }
+    else if (f.chopped) {
+      score = n(f.me);
+      if (f.proj != null) proj = 'proj ' + n(f.proj);
+      if (f.ready && f.teams > 1) {
+        // Projected last = red (chopping block), next two up = amber, everyone else = green
+        color = ctxColor = f.last ? RED : f.rank >= f.teams - 2 ? AMBER : GREEN;
+        ctx = (f.byProj ? 'proj ' : '') + f.rank + '/' + f.teams + ' · ' +
+              (f.last ? n(-f.gap) + ' behind' : '+' + n(f.gap) + ' over last');
+      }
+    } else if (f.opp) {
+      score = n(f.me) + '<span style="color: #8C84A8; margin: 0 6px">–</span>' + n(f.opp.pts);
+      if (f.proj != null || f.opp.proj != null) proj = 'proj ' + n(f.proj) + ' – ' + n(f.opp.proj);
+      ctx = 'vs ' + f.opp.name;
+      if (f.me < f.opp.pts) color = RED;
+    } else { score = n(f.me); }
+
+    return '<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px">' +
+      '<div class="row" style="justify-content: space-between; gap: 10px; align-items: baseline">' +
+        '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: ' + GOLD + '; white-space: nowrap">' +
+          esc(String(f.label).toUpperCase()) + '</span>' +
+        '<span style="font-size: 13px; color: ' + ctxColor + '; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">' +
+          esc(ctx) + '</span></div>' +
+      '<span class="cz" style="font-size: 26px; line-height: 1.1; color: ' + color + '">' + score + '</span>' +
+      (proj ? '<span class="muted" style="font-size: 13px; letter-spacing: .04em">' + esc(proj) + '</span>' : '') +
+    '</div>';
+  });
+
+  el.innerHTML = '<div class="box row" style="gap: 20px; padding: 10px 20px; border-radius: 14px; align-items: stretch; margin-bottom: 10px">' +
+    cells.join('<span style="width: 1px; background: #4A4466; flex: none"></span>') + '</div>';
+}
+
+// ------------------------------------------------------------ NBA (fetched by the tablet itself; ESPN blocks Google's servers)
+var NBA = null;
+
+function loadNba() {
+  var C = clientCfg(), NBA_TEAM = String(C.NBA_TEAM || '').toUpperCase(), NBA_PLAYER = C.NBA_PLAYER || '';
+  if (!NBA_TEAM) { NBA = null; return; }
+  var day = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Toronto' }).replace(/-/g, '');
+  var base = 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/';
+  return fetch(base + 'scoreboard?dates=' + day).then(function (r) { return r.json(); }).then(function (j) {
+    var game = null;
+    (j.events || []).forEach(function (e) {
+      var c = (e.competitions || [])[0] || {}, cs = c.competitors || [];
+      var us = cs.filter(function (x) { return x.team && String(x.team.abbreviation).toUpperCase() === NBA_TEAM; })[0];
+      var them = cs.filter(function (x) { return x !== us; })[0];
+      if (!us || !them || game) return;
+      var st = (e.status || c.status || {}).type || {};
+      game = {
+        opp: them.team.shortDisplayName || them.team.displayName || them.team.abbreviation,
+        home: us.homeAway === 'home', start: new Date(e.date).getTime(),
+        state: st.state || 'pre', done: !!st.completed, detail: st.shortDetail || '',
+        us: Number(us.score || 0), them: Number(them.score || 0), id: e.id, player: null
+      };
+    });
+    if (!game || game.state === 'pre' || !NBA_PLAYER) return game;
+    return fetch(base + 'summary?event=' + game.id).then(function (r) { return r.json(); }).then(function (s) {
+      var who = NBA_PLAYER.toLowerCase();
+      ((s.boxscore || {}).players || []).forEach(function (team) {
+        (team.statistics || []).forEach(function (group) {
+          var labels = (group.labels || group.names || []).map(function (l) { return String(l).toUpperCase(); });
+          (group.athletes || []).forEach(function (a) {
+            var name = ((a.athlete || {}).displayName || '').toLowerCase();
+            if (game.player || name.indexOf(who) < 0) return;
+            if (a.didNotPlay || !(a.stats || []).length) { game.player = { dnp: a.reason || 'Did not play' }; return; }
+            var v = {};
+            labels.forEach(function (l, i) { v[l] = a.stats[i]; });
+            game.player = { pts: v.PTS, reb: v.REB, ast: v.AST, threes: v['3PT'] };
+          });
+        });
+      });
+      return game;
+    }, function () { return game; });
+  }).then(function (g) { NBA = g; if (DATA) render(); }, function (err) { console.log('NBA: ' + err); });
+}
+
+// ------------------------------------------------------------ Sleeper fantasy (fetched by the tablet; public APIs, no key)
+var FANTASY = null, SLEEPER_PROJ = { key: '', at: 0, rows: {} };
+
+function sleeperGet(url) {
+  if (url.indexOf('http') !== 0) url = 'https://api.sleeper.app/v1/' + url;
+  return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status + ' ' + url); return r.json(); });
+}
+
+/** Pre-game player projections for the week (unofficial Sleeper endpoint, refreshed every 30 min). */
+function sleeperProjections(season, week) {
+  var key = season + '-' + week;
+  if (SLEEPER_PROJ.key === key && Date.now() - SLEEPER_PROJ.at < 30 * 60e3) return Promise.resolve(SLEEPER_PROJ.rows);
+  var pos = ['QB', 'RB', 'WR', 'TE', 'K', 'DEF'].map(function (p) { return 'position[]=' + p; }).join('&');
+  return sleeperGet('https://api.sleeper.com/projections/nfl/' + season + '/' + week + '?season_type=regular&' + pos)
+    .then(function (list) {
+      var rows = {};
+      (list || []).forEach(function (r) {
+        if (r && r.player_id && r.stats) rows[r.player_id] = { stats: r.stats, team: r.team || (r.player && r.player.team) || '' };
+      });
+      SLEEPER_PROJ = { key: key, at: Date.now(), rows: rows };
+      return rows;
+    }, function (err) { console.log('Fantasy projections: ' + err); return {}; });
+}
+
+/** How much of each NFL team's game is still to play this week: 1 = not started, 0 = finished. From ESPN. */
+function nflRemaining() {
+  return sleeperGet('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard').then(function (j) {
+    var left = {}, fix = { WSH: 'WAS' };              // ESPN → Sleeper team codes
+    (j.events || []).forEach(function (e) {
+      var c = (e.competitions || [])[0] || {}, st = (e.status || c.status || {}), t = st.type || {};
+      var f = 1;
+      if (t.state === 'post') f = 0;
+      else if (t.state === 'in') {
+        var period = Number(st.period) || 1, clock = String(st.displayClock || '15:00').split(':');
+        var mins = (Number(clock[0]) || 0) + (Number(clock[1]) || 0) / 60;
+        f = period > 4 ? 0.05 : Math.max(0, (60 - ((period - 1) * 15 + (15 - mins))) / 60);
+      }
+      (c.competitors || []).forEach(function (x) {
+        var ab = String((x.team || {}).abbreviation || '').toUpperCase();
+        left[fix[ab] || ab] = f;
+      });
+    });
+    return left;
+  }, function (err) { console.log('Fantasy NFL games: ' + err); return null; });
+}
+
+function loadFantasy() {
+  var C = clientCfg(), SLEEPER_USER = C.SLEEPER_USER || '', SLEEPER_LEAGUES = C.SLEEPER_LEAGUES || [];
+  if (!SLEEPER_USER) { FANTASY = null; return; }
+  var me, season, week;
+  return Promise.all([sleeperGet('state/nfl'), sleeperGet('user/' + encodeURIComponent(SLEEPER_USER))]).then(function (r) {
+    var state = r[0]; me = r[1];
+    if (!me || !me.user_id) throw new Error('No Sleeper user "' + SLEEPER_USER + '"');
+    season = state.league_season || state.season; week = state.display_week || state.week;
+    return Promise.all([sleeperGet('user/' + me.user_id + '/leagues/nfl/' + season), sleeperProjections(season, week), nflRemaining()]);
+  }).then(function (r) {
+    var leagues = r[0] || [], proj = r[1] || {}, left = r[2];
+    var picks = SLEEPER_LEAGUES.map(function (want) {
+      var w = String(want.name).toLowerCase();
+      var l = leagues.filter(function (x) { return String(x.league_id).toLowerCase() === w || String(x.name).toLowerCase() === w; })[0];
+      return l ? { league: l, want: want } : null;
+    }).filter(Boolean);
+    if (!picks.length) throw new Error('None of SLEEPER_LEAGUES found. Your leagues: ' + leagues.map(function (l) { return l.name + ' (' + l.league_id + ')'; }).join(' | '));
+    return Promise.all(picks.map(function (p) {
+      var id = p.league.league_id;
+      return Promise.all([sleeperGet('league/' + id + '/matchups/' + week), sleeperGet('league/' + id + '/rosters'),
+                          sleeperGet('league/' + id + '/users')]).then(function (x) {
+        return sleeperSummary(p.league, p.want, week, x[0] || [], x[1] || [], x[2] || [], me.user_id, proj, left);
+      });
+    }));
+  }).then(function (list) {
+    FANTASY = (list || []).filter(Boolean);
+    if (DATA) render();
+  }, function (err) { console.log('Fantasy: ' + err); });
+}
+
+function sleeperSummary(league, want, week, matchups, rosters, users, myId, proj, left) {
+  var owner = {}, name = {};
+  rosters.forEach(function (r) { owner[r.roster_id] = r.owner_id; });
+  users.forEach(function (u) { name[u.user_id] = (u.metadata && u.metadata.team_name) || u.display_name || 'Opponent'; });
+  var mine = rosters.filter(function (r) { return r.owner_id === myId || (r.co_owners || []).indexOf(myId) >= 0; })[0];
+  if (!mine) return null;
+  var rec = Number(((league.scoring_settings || {}).rec) || 0);
+  var field = rec >= 1 ? 'pts_ppr' : rec >= 0.5 ? 'pts_half_ppr' : 'pts_std';
+  var hasProj = Object.keys(proj).length > 0;
+  var starters = function (m) { return (m.starters || []).filter(function (p) { return p && p !== '0'; }); };
+  var pts = function (m) { return Number(m.custom_points != null ? m.custom_points : m.points) || 0; };
+
+  // Live projection, like Sleeper's: points scored so far + each starter's projection scaled by how much of his game is left
+  var projOf = function (m) {
+    if (!hasProj) return null;
+    var scored = m.players_points || {};
+    return starters(m).reduce(function (sum, p) {
+      var row = proj[p], pr = row ? Number(row.stats[field]) || 0 : 0, got = Number(scored[p]) || 0, f;
+      if (left && row && left[String(row.team).toUpperCase()] != null) f = left[String(row.team).toUpperCase()];
+      else f = got ? 0.5 : 1;                                     // unknown game state: rough guess
+      return sum + got + pr * f;
+    }, 0);
+  };
+
+  var alive = matchups.filter(function (m) { return starters(m).length; });   // chopped teams have no starters
+  var me = alive.filter(function (m) { return m.roster_id === mine.roster_id; })[0];
+  var out = { label: want.label || league.name, chopped: !!want.chopped, week: week };
+  if (!me) { out.out = true; return out; }
+  out.me = pts(me); out.proj = projOf(me);
+
+  if (want.chopped) {
+    // Rank by projected final score (falls back to actual points if projections are unavailable)
+    var score = function (m) { var v = projOf(m); return v == null ? pts(m) : v; };
+    var mine2 = score(me), others = alive.filter(function (m) { return m !== me; }).map(score).sort(function (a, b) { return a - b; });
+    out.byProj = hasProj;
+    out.rank = alive.filter(function (m) { return score(m) > mine2; }).length + 1;
+    out.teams = alive.length;
+    out.gap = others.length ? mine2 - others[0] : null;            // vs the lowest of the others
+    out.last = out.rank === out.teams && out.teams > 1;
+    out.ready = hasProj || alive.some(function (m) { return pts(m) > 0; });
+  } else {
+    var opp = alive.filter(function (m) { return m.matchup_id != null && m.matchup_id === me.matchup_id && m !== me; })[0];
+    if (opp) out.opp = { name: name[owner[opp.roster_id]] || 'Opponent', pts: pts(opp), proj: projOf(opp) };
+  }
+  return out;
+}
+
+
+// ============================================================ end Toronto add-ons
 
 // First run: ask for the board link.
 function showSetup() {
