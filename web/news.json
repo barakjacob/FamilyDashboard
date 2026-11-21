@@ -1,0 +1,63 @@
+{
+  "edition": "Evening",
+  "generated": "2026-11-21T23:41:00Z",
+  "title": "Evening Brief — Sat 21 Nov",
+  "stories": [
+    {
+      "board": "Big AI stock crash shakes Wall Street",
+      "headline": "US stocks have their worst week in years",
+      "what": "On Friday the Nasdaq fell about 5.3% and the S&P 500 fell 3.7%. The Dow and S&P 500 are now in a correction (down 10% or more from their top). Nvidia dropped about 14%, and newly listed Anthropic also fell.",
+      "why": "Many retirement and savings accounts hold these stocks, so a big drop touches lots of families.",
+      "sides": "No major disagreement on the facts; some outlets call it historic, others say AI stocks were just too expensive.",
+      "update": false,
+      "sources": [
+        {"name": "Fox Business", "url": "https://www.foxbusiness.com/markets/wall-street-suffers-historic-losses-dow-sp-500-plunge-correction-territory"},
+        {"name": "Axios", "url": "https://www.axios.com/2026/11/20/anthropic-ipo-nvidia-ai-tech-selloff"},
+        {"name": "UPI", "url": "https://www.upi.com/Top_News/US/2026/11/20/stocks-dow-jones-nasdaq-correction-territory/1061795214998/"}
+      ]
+    },
+    {
+      "board": "US cyber chief out after tech outages",
+      "headline": "White House cyber boss replaced after many outages",
+      "what": "Sean Cairncross, the top White House cyber (computer safety) official, is out after a string of outages hit flights, a big bank, Microsoft 365 and government systems. Pentagon tech chief Kirsten Davies is filling in.",
+      "why": "When key computer systems fail, planes, banks and offices can stop working.",
+      "sides": "Fox and some outlets say he was fired; CBS and NBC say he is leaving. Officials say no link to an attack was found, but some experts doubt that.",
+      "update": false,
+      "sources": [
+        {"name": "Fox News", "url": "https://www.foxnews.com/live-news/tech-outages-trump-national-cyber-director-fired-11-20-26"},
+        {"name": "NBC News", "url": "https://www.nbcnews.com/politics/white-house/national-cyber-director-sean-cairncross-leaving-kirsten-davies-replaci-rcna610329"},
+        {"name": "ABC News", "url": "https://abcnews.com/Politics/white-house-replaces-national-cyber-director-amid-widespread/story?id=138310514"}
+      ]
+    },
+    {
+      "board": "Eisenkot pushes for new Israeli government",
+      "headline": "Eisenkot calls Likud to nonstop talks on a new government",
+      "what": "Gadi Eisenkot, who has the job of forming Israel's next government, invited Netanyahu's Likud party to a marathon of talks starting Sunday. Bennett backs a unity (everyone together) government with Eisenkot as prime minister.",
+      "why": "It decides who will lead Israel next, after Netanyahu lost his majority in the election.",
+      "sides": "Eisenkot's own camp is split: some want a deal with Likud, others warn against it.",
+      "update": false,
+      "sources": [
+        {"name": "Ynetnews", "url": "https://www.ynetnews.com/article/byvciuykqe"},
+        {"name": "Ynetnews", "url": "https://www.ynetnews.com/article/r1ngya60fg"}
+      ]
+    },
+    {
+      "board": "Carney signs China deal, holds firm on US",
+      "headline": "Canada makes a new trade deal with China",
+      "what": "PM Carney announced a strategic partnership (a closer working deal) with China, which will let in more Canadian food like halibut and shrimp. He says Canada will not rush a trade deal with the US unless it protects car jobs.",
+      "why": "Trade decides how many Canadian jobs and sales there are, and the US is still our biggest buyer.",
+      "sides": "The government says it opens new markets; critics say China gets more and could cancel the deal any time.",
+      "update": false,
+      "sources": [
+        {"name": "National Post (via Yahoo)", "url": "https://ca.news.yahoo.com/first-reading-carney-strategic-partnership-115515423.html"},
+        {"name": "CBC News", "url": "https://www.cbc.ca/news/politics/carney-trump-trade-canada-busy-9.7426568"}
+      ]
+    }
+  ],
+  "quick_hits": [
+    "Israel is getting ready in case Iran strikes first, as reports say the US and Israel weigh new strikes on Iran; Trump has not decided (Ynetnews).",
+    "Canada's new budget adds no new money to protect Jewish communities, even as threats and security costs rise (The Hub).",
+    "Americans expect prices to rise more slowly: one-year inflation hopes fell to 3.7% in a November survey."
+  ],
+  "big_picture": "A rough week: AI stocks fell hard and computer outages shook the US, while Israel and Canada work on big political and trade choices."
+}
