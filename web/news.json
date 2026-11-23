@@ -1,62 +1,52 @@
 {
-  "edition": "Morning",
-  "generated": "2026-11-23T14:55:00Z",
-  "title": "Morning Brief — Mon 23 Nov",
+  "edition": "Evening",
+  "generated": "2026-11-23T23:41:44Z",
+  "title": "Evening Brief — Mon 23 Nov",
   "stories": [
     {
-      "board": "Stocks bounce back after big AI selloff",
-      "headline": "Stock prices point up after a very bad week for AI companies",
-      "what": "Last week the S&P 500 fell 8.6 percent, its worst week in a long time, as AI and chip company stocks dropped. This morning futures (early bets on where prices go) are up strongly, led by Nvidia.",
-      "why": "Many people's savings and retirement money are tied to these big tech stocks.",
-      "sides": "No major disagreement: outlets on all sides report the drop and the bounce; worries include a reported SEC (US money watchdog) probe of Nvidia's accounting.",
-      "update": false,
-      "sources": [
-        { "name": "Fox Business", "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026" },
-        { "name": "The Globe and Mail", "url": "https://www.theglobeandmail.com/investing/markets/inside-the-market/market-news/article-premarket-us-futures-rally-as-ai-rout-pauses/" },
-        { "name": "Reuters via Investing.com", "url": "https://www.investing.com/news/economy-news/exclusiveus-secs-nvidia-probe-is-examining-potential-accounting-issues-sources-say-5042460" }
-      ]
-    },
-    {
-      "board": "Mexico catches top cartel boss El Chapo Isidro",
-      "headline": "Mexico's army captures one of the FBI's 10 most wanted",
-      "what": "Soldiers caught Fausto Isidro Meza-Flores, a Sinaloa drug cartel (crime gang) leader, in a Friday night raid. Fighting followed in Sinaloa, and four soldiers were killed.",
-      "why": "His gang is accused of moving drugs into the US, and the US had offered up to 5 million dollars for him.",
-      "sides": "No major disagreement: Mexico and the US both say US intelligence (secret information) helped.",
-      "update": false,
-      "sources": [
-        { "name": "CBS News", "url": "https://www.cbsnews.com/news/mexico-drug-kingpin-arrest-fausto-isidro-meza-flores-sinaloa/" },
-        { "name": "PBS NewsHour (AP)", "url": "https://www.pbs.org/newshour/world/mexico-detains-top-cartel-boss-el-chapo-isidro-setting-off-a-burst-of-violence-in-sinaloa" },
-        { "name": "Washington Times", "url": "https://www.washingtontimes.com/news/2026/nov/21/wanted-cartel-leader-captured-mexico-bloody-shootout-left-11-dead/" }
-      ]
-    },
-    {
-      "board": "CrowdStrike to buy Zscaler for $44 billion",
-      "headline": "Two big cybersecurity companies plan to join together",
-      "what": "CrowdStrike agreed to buy Zscaler for about 44 billion US dollars, paid in its own shares instead of cash. Both companies protect computers and networks from hackers.",
-      "why": "It would make one of the biggest cybersecurity (computer safety) companies in the world.",
-      "sides": "No major disagreement; regulators (government rule checkers) still have to approve it.",
-      "update": false,
-      "sources": [
-        { "name": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-11-23/crowdstrike-reaches-44-billion-cybersecurity-deal-for-zscaler" },
-        { "name": "Fast Company", "url": "https://www.fastcompany.com/91647412/crowdstrike-is-buying-zscaler-to-create-a-cybersecurity-giant-built-for-the-era-of-ai-agents" }
-      ]
-    },
-    {
-      "board": "Israel unity talks stuck; Eisenkot deadline Dec 6",
-      "headline": "Israel still has no new government after Netanyahu-Eisenkot talks",
-      "what": "Sunday's four-hour talks ended with no deal. Eisenkot has until Dec 6 (maybe Dec 20) to form a government, and says he may form an emergency (minority) government if talks fail.",
-      "why": "This decides who leads Israel next.",
-      "sides": "Each camp blames the other: they still split on Ben-Gvir, court laws and who is prime minister first.",
+      "board": "Nvidia brings back Huang; stocks soar",
+      "headline": "Nvidia rehires its boss, and the stock market has a huge day",
+      "what": "Nvidia's board gave Jensen Huang his CEO (top boss) job back, days after he quit during a review of his ties to a businesswoman some reports link to Chinese spies. Nvidia stock jumped about 31 percent, the S&P 500 rose about 4.7 percent and the Nasdaq about 6.5 percent.",
+      "why": "Nvidia makes the chips that power AI, so its trouble had dragged down the whole market last week.",
+      "sides": "President Trump backed Huang's return; Treasury Secretary Bessent said the government still wants answers, and some reports keep raising the spy concerns.",
       "update": true,
       "sources": [
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/rke0yyzkxl" }
+        { "name": "CBS News", "url": "https://www.cbsnews.com/news/nvidia-reinstates-jensen-huang-ceo/" },
+        { "name": "Fox News", "url": "https://www.foxnews.com/live-news/ai-news-tech-markets-nvidia-11-23-26" },
+        { "name": "The Motley Fool", "url": "https://www.fool.com/coverage/stock-market-today/2026/11/23/stock-market-today-nov-23-nvidia-surges-31-adding-nearly-usd1-trillion-in-market-value-as-jensen-huang-reclaims-ceo-role/" }
+      ]
+    },
+    {
+      "board": "World climate talks end with no deal",
+      "headline": "The big UN climate meeting in Turkey failed to agree",
+      "what": "COP31 (the yearly world climate meeting) in Antalya, Turkey ended with no main agreement after running two extra days. Countries fought over whether to mention fossil fuels (coal, oil and gas) and over money for poorer countries.",
+      "why": "These meetings set the world's plan for slowing climate change.",
+      "sides": "The EU and island nations rejected a draft that left out fossil fuels; Saudi Arabia and Russia pushed to remove them; climate groups blame rich countries too.",
+      "update": false,
+      "sources": [
+        { "name": "ABC News (US)", "url": "https://abcnews.com/Technology/climate-conference-ends-signature-agreement-countries-clash-fossil/story?id=138359179" },
+        { "name": "NPR", "url": "https://www.npr.org/2026/11/22/nx-s1-6046195/cop31-climate-talks-close-disappointment" },
+        { "name": "Democracy Now", "url": "https://www.democracynow.org/2026/11/23/cop31_recap" }
+      ]
+    },
+    {
+      "board": "Ukraine sinks Russian warship near Libya",
+      "headline": "Ukraine says its sea drones sank a Russian warship in Libya",
+      "what": "President Zelenskyy confirmed Ukrainian naval drones (robot boats) sank the Russian warship Merkury at a port in Libya, far from Ukraine. Ukraine also says it damaged a sanctioned (punished) Russian cargo ship.",
+      "why": "It shows the war between Russia and Ukraine is now reaching places far from the front line.",
+      "sides": "No major disagreement on the facts; the UN criticized drone attacks off Benghazi, Libya.",
+      "update": false,
+      "sources": [
+        { "name": "CBC News", "url": "https://www.cbc.ca/news/world/ukraine-behind-attack-that-sank-russian-warship-off-libya-9.7432215" },
+        { "name": "CBS News", "url": "https://www.cbsnews.com/news/ukraine-zelenskyy-2-russian-ships-libya/" },
+        { "name": "The Hill", "url": "https://thehill.com/policy/defense/6237786-ukraine-drones-sink-russian-ship-zelensky/" }
       ]
     }
   ],
   "quick_hits": [
-    "Ontario set late-November heat records on Saturday; now lake-effect snow (snow made over warm lakes) hits snowbelts, with only flurries for Toronto.",
-    "Bahrain says an Iranian attack hit an industrial site and hurt two people; tankers (oil ships) were also hit near Hormuz.",
-    "Toronto Jewish security leaders say the community needs about 50 million dollars more for safety upgrades as threats rise."
+    "Canada's 2026 budget adds no new money for Jewish community security, even as threats and safety costs climb.",
+    "Israel still has no new government; Netanyahu and Eisenkot teams plan more talks after Sunday's meeting ended with no deal.",
+    "PM Carney joked about Trump with a Trump impersonator at Ottawa's Press Gallery Dinner."
   ],
-  "big_picture": "After a scary week, markets are catching their breath, while Israel's government talks are still stuck."
+  "big_picture": "Wall Street cheered Nvidia's boss coming back, but the world could not agree on a climate plan."
 }
