@@ -3,45 +3,62 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
 <style>
-  html, body { margin: 0; height: 100%; background: #1C1A2E; overflow: hidden; }
-  body { font-family: 'EB Garamond', Georgia, serif; color: #F3E9D2; -webkit-font-smoothing: antialiased; }
-  .cz { font-family: Cinzel, Georgia, serif; }
+  :root, .theme-storybook {
+    --bg: #1C1A2E; --text: #F3E9D2; --gold: #C9B37E; --muted: #A9A2C6; --muted2: #8C84A8; --line: #4A4466;
+    --panel: #F1E6CC; --ink: #2A2118; --ink2: #5C4A33; --ink3: #6B5636; --rule: #D8C9A6;
+    --display: Cinzel, Georgia, serif; --body: 'EB Garamond', Georgia, serif; --boxbg: transparent; }
+  .theme-midnight {
+    --bg: #0F1217; --text: #ECEFF3; --gold: #8AB4F8; --muted: #9BA3AE; --muted2: #6B7380; --line: #262C36;
+    --panel: #171C24; --ink: #ECEFF3; --ink2: #9BA3AE; --ink3: #B6BDC7; --rule: #262C36;
+    --display: Inter, system-ui, sans-serif; --body: Inter, system-ui, sans-serif; --boxbg: #151A21; }
+  .theme-nordic {
+    --bg: #E9EDE6; --text: #1E2A23; --gold: #3E7A58; --muted: #66716A; --muted2: #8A948D; --line: #CDD5CC;
+    --panel: #FAFBF8; --ink: #1E2A23; --ink2: #5B665F; --ink3: #66716A; --rule: #E1E6DF;
+    --display: Fraunces, Georgia, serif; --body: Inter, system-ui, sans-serif; --boxbg: #F6F8F4; }
+  .theme-terracotta {
+    --bg: #2B1F1A; --text: #F6EBDD; --gold: #E0A867; --muted: #C4AE9A; --muted2: #9C8574; --line: #4A3830;
+    --panel: #F6EBDD; --ink: #2B1F1A; --ink2: #6B5243; --ink3: #7A5F4E; --rule: #E3D2BF;
+    --display: Fraunces, Georgia, serif; --body: Inter, system-ui, sans-serif; --boxbg: transparent; }
+  .box { background: var(--boxbg); }
+  html, body { margin: 0; height: 100%; background: var(--bg); overflow: hidden; }
+  body { font-family: var(--body); color: var(--text); -webkit-font-smoothing: antialiased; }
+  .cz { font-family: var(--display); }
   #stage { width: 1280px; height: 800px; transform-origin: 0 0; position: absolute; left: 0; top: 0; }
   #day { box-sizing: border-box; width: 1280px; height: 800px; padding: 28px 32px; display: flex; gap: 28px; }
   .col-l { width: 500px; flex: none; display: flex; flex-direction: column; gap: 16px; min-height: 0; }
   .col-r { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
-  .label { font-family: Cinzel, serif; letter-spacing: .28em; color: #C9B37E; font-size: 15px; }
-  .muted { color: #A9A2C6; }
-  .box { border: 1px solid #4A4466; border-radius: 12px; }
+  .label { font-family: var(--display); letter-spacing: .28em; color: var(--gold); font-size: 15px; }
+  .muted { color: var(--muted); }
+  .box { border: 1px solid var(--line); border-radius: 12px; }
   .row { display: flex; align-items: center; }
   .grow { flex: 1; min-width: 0; }
   .badge { display: flex; width: 40px; height: 40px; flex: none; border-radius: 999px; align-items: center; justify-content: center; }
-  .parch { background-color: #F1E6CC; background-size: cover; background-position: center; color: #2A2118; }
+  .parch { background-color: var(--panel); background-size: cover; background-position: center; color: var(--ink); }
   .ev { display: flex; gap: 16px; align-items: center; padding: 9px 18px; border-radius: 12px; }
   .ev .t { font-size: 22px; font-weight: 500; line-height: 1.15; }
-  .ev .w { font-size: 15px; color: #5C4A33; }
-  .ev .time { font-family: Cinzel, serif; font-size: 20px; }
+  .ev .w { font-size: 15px; color: var(--ink2); }
+  .ev .time { font-family: var(--display); font-size: 20px; }
   .chip { display: inline-flex; gap: 8px; align-items: center; padding: 5px 12px 5px 8px; border-radius: 999px; font-size: 17px; margin: 3px 8px 3px 0; }
   .chip .ct { color: #5C4A33; }
-  .chip .cn { font-weight: 500; }
-  .wk { display: flex; gap: 16px; align-items: center; padding: 6px 0; border-top: 1px solid #D8C9A6; min-height: 40px; }
+  .chip .cn { font-weight: 500; color: #2A2118; }
+  .wk { display: flex; gap: 16px; align-items: center; padding: 6px 0; border-top: 1px solid var(--rule); min-height: 40px; }
   .wk .d { width: 76px; flex: none; display: flex; align-items: baseline; gap: 8px; }
-  .wk .dow { font-family: Cinzel, serif; font-size: 13px; letter-spacing: .18em; color: #5C4A33; }
-  .wk .dn { margin-left: auto; flex: none; display: flex; align-items: center; gap: 6px; font-style: italic; font-size: 17px; color: #6B5636; padding-left: 12px; max-width: 230px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .wk .num { font-family: Cinzel, serif; font-size: 22px; font-weight: 700; }
+  .wk .dow { font-family: var(--display); font-size: 13px; letter-spacing: .18em; color: var(--ink2); }
+  .wk .dn { margin-left: auto; flex: none; display: flex; align-items: center; gap: 6px; font-style: italic; font-size: 17px; color: var(--ink3); padding-left: 12px; max-width: 230px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .wk .num { font-family: var(--display); font-size: 22px; font-weight: 700; }
   .hidden { display: none !important; }
-  #night { position: absolute; inset: 0; width: 1280px; height: 800px; background: #0E0C1C; color: #A9A2C6; overflow: hidden; }
+  #night { position: absolute; inset: 0; width: 1280px; height: 800px; background: #0E0C1C; color: var(--muted); overflow: hidden; }
   .star { position: absolute; border-radius: 999px; animation: tw 6s ease-in-out infinite; }
   @keyframes tw { 0%, 100% { opacity: .25 } 50% { opacity: .85 } }
   #newsFull { position: absolute; inset: 0; z-index: 10; background: rgba(14,12,28,.82); display: flex; align-items: center; justify-content: center; }
   #newsFull .sheet { width: 1040px; max-height: 720px; overflow-y: auto; padding: 28px 40px; border-radius: 18px; box-sizing: border-box; }
   #newsFull h2 { margin: 0 0 4px; font-size: 26px; }
-  #newsFull .st { margin: 16px 0 0; padding-top: 12px; border-top: 1px solid #D8C9A6; font-size: 18px; line-height: 1.35; }
+  #newsFull .st { margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--rule); font-size: 18px; line-height: 1.35; }
   #newsFull .st b { font-size: 20px; }
-  #newsFull .lbl { font-family: Cinzel, serif; font-size: 12px; letter-spacing: .14em; color: #7A5C12; margin-right: 6px; }
-  #newsFull .src { font-size: 14px; color: #6B5636; font-style: italic; }
+  #newsFull .lbl { font-family: var(--display); font-size: 12px; letter-spacing: .14em; color: #7A5C12; margin-right: 6px; }
+  #newsFull .src { font-size: 14px; color: var(--ink3); font-style: italic; }
 </style>
 </head>
 <body>
@@ -51,7 +68,7 @@
     <section class="col-l">
       <div>
         <div class="row" style="justify-content: space-between; align-items: baseline">
-          <span id="date" class="cz" style="font-size: 16px; letter-spacing: .32em; color: #C9B37E"></span>
+          <span id="date" class="cz" style="font-size: 16px; letter-spacing: .32em; color: var(--gold)"></span>
           <span id="battery" class="muted" style="font-size: 14px"></span>
         </div>
         <div id="clock" class="cz" style="font-size: 116px; line-height: 1; font-weight: 500"></div>
@@ -73,12 +90,12 @@
       <div id="weekPanel" class="parch" style="position: relative; flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 18px 28px 18px 40px; border-radius: 16px; min-height: 0">
         <div class="row" style="justify-content: space-between; align-items: baseline">
           <h2 class="cz" style="margin: 0; font-size: 24px; font-weight: 700">The Week Ahead</h2>
-          <span id="weekRange" style="font-size: 16px; font-style: italic; color: #5C4A33"></span>
+          <span id="weekRange" style="font-size: 16px; font-style: italic; color: var(--ink2)"></span>
         </div>
         <div id="week" style="flex: 1; overflow: hidden"></div>
-        <div class="row" style="gap: 20px; padding-top: 10px; border-top: 1px solid #D8C9A6; font-size: 16px">
+        <div class="row" style="gap: 20px; padding-top: 10px; border-top: 1px solid var(--rule); font-size: 16px">
           <span id="legend" class="row" style="gap: 20px"></span>
-          <span id="notices" style="margin-left: auto; color: #5C4A33; text-align: right"></span>
+          <span id="notices" style="margin-left: auto; color: var(--ink2); text-align: right"></span>
         </div>
       </div>
       <div class="row" style="gap: 14px; align-items: stretch">
@@ -224,9 +241,9 @@ function person(key) { return (DATA && DATA.people && DATA.people[key]) || { nam
 
 // ------------------------------------------------------------ render
 function parchBg() {
-  if (!ART.parchment) return;
+  var useArt = ART.parchment && THEMES[THEME_APPLIED || 'storybook'];
   var parch = document.querySelectorAll('.parch');
-  for (var i = 0; i < parch.length; i++) parch[i].style.backgroundImage = 'url(' + ART.parchment + ')';
+  for (var i = 0; i < parch.length; i++) parch[i].style.backgroundImage = useArt ? 'url(' + ART.parchment + ')' : 'none';
 }
 function render() {
   var now = Date.now();
@@ -251,9 +268,9 @@ function render() {
 
   // Weather
   $('weather').innerHTML = (DATA.weather || []).map(function (w) {
-    return '<div class="box row" style="gap: 12px; padding: 10px 14px">' + svg(weatherIcon(w), '#F3E9D2', 38, 1.5) +
+    return '<div class="box row" style="gap: 12px; padding: 10px 14px">' + svg(weatherIcon(w), 'var(--text)', 38, 1.5) +
       '<div style="display: flex; flex-direction: column; min-width: 0">' +
-      '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: #C9B37E">' + esc(w.place) + '</span>' +
+      '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: var(--gold)">' + esc(w.place) + '</span>' +
       '<span class="cz" style="font-size: 25px; line-height: 1.1">' + w.temp + '°</span>' +
       '<span class="muted" style="font-size: 15px">' + weatherWord(w) + ' · ' + w.max + '° / ' + w.min + '°</span></div></div>';
   }).join('');
@@ -261,6 +278,7 @@ function render() {
   renderDrive(now);
   renderBins(now, mins);
   renderStocks();
+  applyTheme();
   renderToday(now, mins);
   renderNews(now);
   renderF1(now);
@@ -285,17 +303,17 @@ function renderDrive(now) {
   if (d.sentAt) note.push('new route sent to ' + person('commuter').name + '’s phone ' + d.sentAt);
   el.innerHTML =
     '<div style="display: flex; flex-direction: column; gap: 8px; padding: 12px 16px; border-radius: 12px; ' +
-      (alert ? 'border: 2px solid #D9574C; background: #2A1B2A' : 'border: 1px solid #4A4466') + '">' +
+      (alert ? 'border: 2px solid #D9574C; background: #2A1B2A' : 'border: 1px solid var(--line)') + '">' +
     '<div class="row" style="gap: 14px">' +
       '<span class="badge" style="background: #F3DDE7">' + svg('cat', '#B03A6F', 24) + '</span>' +
       '<div class="grow" style="display: flex; flex-direction: column">' +
         '<span style="font-size: 19px; font-weight: 500">' + esc(d.title) + (alert ? ' · new route' : '') + '</span>' +
-        '<span style="font-size: 15px; color: ' + (alert ? '#F2B3AC' : '#A9A2C6') + '">' + esc(sub) + '</span></div>' +
+        '<span style="font-size: 15px; color: ' + (alert ? '#F2B3AC' : 'var(--muted)') + '">' + esc(sub) + '</span></div>' +
       '<div style="display: flex; flex-direction: column; align-items: flex-end; flex: none">' +
         '<span class="cz" style="font-size: 28px; line-height: 1">' + d.liveMin + ' min</span>' +
         (d.leaveBy ? '<span style="font-size: 15px; color: ' + (alert ? '#F2B3AC' : '#E0A84A') + '">Leave by ' + esc(d.leaveBy) + '</span>' : '') +
       '</div></div>' +
-    (note.length ? '<div class="row" style="gap: 8px; padding-top: 8px; border-top: 1px solid #4A4466; font-size: 15px; color: #DCD6F0">' +
+    (note.length ? '<div class="row" style="gap: 8px; padding-top: 8px; border-top: 1px solid var(--line); font-size: 15px; color: #DCD6F0">' +
       svg('frost', '#9FC7E8', 16) + '<span>' + esc(note.join(' · ')) + '</span></div>' : '') +
     '</div>';
 }
@@ -306,7 +324,7 @@ function renderBins(now, mins) {
   el.innerHTML = '<div class="row" style="gap: 14px; padding: 14px 16px; border: 2px solid #C9A44C; border-radius: 12px">' +
     '<span class="badge" style="background: #EFE4C6">' + svg('bin', '#7A5C12', 24) + '</span>' +
     '<div class="grow" style="display: flex; flex-direction: column">' +
-      '<span class="cz" style="font-size: 13px; letter-spacing: .22em; color: #C9B37E">BINS OUT TONIGHT</span>' +
+      '<span class="cz" style="font-size: 13px; letter-spacing: .22em; color: var(--gold)">BINS OUT TONIGHT</span>' +
       '<span style="font-size: 21px; font-weight: 500">' + esc(b.tonight.label) + '</span></div>' +
     '<span class="muted" style="font-size: 15px">collected tomorrow</span></div>';
 }
@@ -405,8 +423,8 @@ function renderWeek(now) {
 }
 
 function renderBus(now) {
-  var b = DATA.bus, head = '<div class="row" style="gap: 8px">' + svg('bus', '#C9B37E', 20, 1.6) +
-    '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: #C9B37E">NEXT BUS</span></div>';
+  var b = DATA.bus, head = '<div class="row" style="gap: 8px">' + svg('bus', 'var(--gold)', 20, 1.6) +
+    '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: var(--gold)">NEXT BUS</span></div>';
   var body;
   if (!b) body = '<span class="muted">Bus times unavailable</span>';
   else if (b.missingKey) body = '<span class="muted" style="font-size: 16px">Add your TransportAPI keys and bus stop to show the next bus</span>';
@@ -425,14 +443,14 @@ function renderBus(now) {
 }
 
 function renderDiesel() {
-  var f = DATA.diesel, head = '<div class="row" style="gap: 8px">' + svg('fuel', '#C9B37E', 20, 1.6) +
-    '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: #C9B37E">CHEAPEST ' + esc(String(DATA.fuelLabel || 'Diesel').toUpperCase()) + ' NEARBY</span></div>';
+  var f = DATA.diesel, head = '<div class="row" style="gap: 8px">' + svg('fuel', 'var(--gold)', 20, 1.6) +
+    '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: var(--gold)">CHEAPEST ' + esc(String(DATA.fuelLabel || 'Diesel').toUpperCase()) + ' NEARBY</span></div>';
   var body;
   if (!f) body = '<span class="muted">Fuel prices unavailable</span>';
   else if (f.missingKey) body = '<span class="muted" style="font-size: 16px">Add your Fuel Finder keys to show fuel prices</span>';
   else body = (f.stations || []).map(function (s, i) {
     return '<div class="row" style="gap: 12px; align-items: baseline; font-size: 17px">' +
-      '<span class="cz" style="font-size: 13px; color: #C9B37E; width: 14px">' + (i + 1) + '</span>' +
+      '<span class="cz" style="font-size: 13px; color: var(--gold); width: 14px">' + (i + 1) + '</span>' +
       '<span class="grow" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">' + esc(s.name) + (s.area ? ' · ' + esc(s.area) : '') + '</span>' +
       '<span class="muted" style="font-size: 14px">' + s.miles + ' mi</span>' +
       '<span class="cz" style="font-size: 20px; width: 78px; text-align: right">' + s.price.toFixed(1) + 'p</span></div>';
@@ -470,11 +488,11 @@ function renderNight(now, p) {
   var info = [];
   if (DATA && DATA.bins && (DATA.bins.tonight || (minutesOfDay(now) < NIGHT_TO && DATA.bins.today))) {
     var b = DATA.bins.tonight || DATA.bins.today;
-    info.push(svg('bin', '#A9A2C6', 18) + '<span>Bins out tonight: ' + esc(b.label.toLowerCase()) + '</span>');
+    info.push(svg('bin', 'var(--muted)', 18) + '<span>Bins out tonight: ' + esc(b.label.toLowerCase()) + '</span>');
   }
   if (DATA && DATA.weather && DATA.weather[0]) {
     var low = nextMorningLow(DATA.weather[0], now);
-    if (low != null && low <= 3) info.push(svg('frost', '#A9A2C6', 18) + '<span>Frost likely by morning (' + Math.round(low) + '°)</span>');
+    if (low != null && low <= 3) info.push(svg('frost', 'var(--muted)', 18) + '<span>Frost likely by morning (' + Math.round(low) + '°)</span>');
   }
   if (DATA && DATA.calendar) {
     var tomorrow = dayKey(now + (minutesOfDay(now) >= NIGHT_FROM ? 864e5 : 0));
@@ -528,7 +546,7 @@ function applyArt() {
   if (ART.dayBg) $('day').style.background = 'linear-gradient(rgba(28,26,46,.55), rgba(28,26,46,.55)), url(' + ART.dayBg + ') center / cover';
   if (ART.nightSky) $('night').style.background = '#0E0C1C url(' + ART.nightSky + ') center / cover';
   var parch = document.querySelectorAll('.parch');
-  for (var i = 0; i < parch.length; i++) if (ART.parchment) parch[i].style.background = '#F1E6CC url(' + ART.parchment + ') center / cover';
+  for (var i = 0; i < parch.length; i++) if (ART.parchment) parch[i].style.background = 'var(--panel) url(' + ART.parchment + ') center / cover';
   if (ART.corner) {
     var wk = $('weekPanel');
     wk.insertAdjacentHTML('beforeend', '<img src="' + ART.corner + '" alt="" style="position: absolute; left: 6px; top: 6px; width: 64px; opacity: .85; pointer-events: none">' +
@@ -543,6 +561,24 @@ setInterval(load, REFRESH_MS);
 setInterval(function () { var m = minutesOfDay(Date.now()); if (m === 4 * 60) location.reload(); }, 60000);
 
 
+
+// ------------------------------------------------------------ themes (Config.gs → CLIENT.THEME, or ?theme= to preview)
+var THEME_APPLIED = null;
+var THEMES = { storybook: true, midnight: false, nordic: false, terracotta: false };   // true = uses the artwork
+function applyTheme() {
+  var q = (location.search.match(/[?&]theme=([a-z]+)/) || [])[1];
+  var t = q || clientCfg().THEME || 'storybook';
+  if (!(t in THEMES)) t = 'storybook';
+  if (t === THEME_APPLIED) return;
+  THEME_APPLIED = t;
+  document.documentElement.className = 'theme-' + t;
+  var art = THEMES[t];
+  $('day').style.background = art && ART.dayBg ? 'linear-gradient(rgba(28,26,46,.55), rgba(28,26,46,.55)), url(' + ART.dayBg + ') center / cover' : 'var(--bg)';
+  var parch = document.querySelectorAll('.parch');
+  for (var i = 0; i < parch.length; i++) parch[i].style.background = art && ART.parchment ? 'var(--panel) url(' + ART.parchment + ') center / cover' : 'var(--panel)';
+  var corners = document.querySelectorAll('#weekPanel > img');
+  for (var j = 0; j < corners.length; j++) corners[j].style.display = art ? '' : 'none';
+}
 // ============================================================ Toronto add-ons
 // Personal settings (Sleeper username, league IDs, NBA team) come from Config.gs → CLIENT,
 // delivered with the board data, so this public page contains nothing personal.
@@ -561,8 +597,8 @@ function renderTtc(now) {
   if (!a) { el.innerHTML = ''; return; }
   if (!a.length) {
     el.innerHTML = '<div class="box row" style="gap: 14px; padding: 10px 18px; border-radius: 14px">' +
-      svg('bus', '#C9B37E', 20, 1.6) +
-      '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: #C9B37E">TTC</span>' +
+      svg('bus', 'var(--gold)', 20, 1.6) +
+      '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: var(--gold)">TTC</span>' +
       '<span class="muted" style="font-size: 15px">Your lines are running normally</span></div>';
     return;
   }
@@ -586,12 +622,12 @@ function renderStocks() {
   var s = DATA.stocks, el = $('stocks');
   if (!s || !s.length) { el.innerHTML = ''; return; }
   el.innerHTML = '<div class="box row" style="gap: 18px; padding: 8px 16px; align-items: center">' +
-    svg('stocks', '#C9B37E', 22) +
+    svg('stocks', 'var(--gold)', 22) +
     '<div class="row grow" style="gap: 22px; justify-content: space-around">' +
     s.map(function (x) {
       var up = x.change >= 0, col = up ? '#7BC47F' : '#E57373';
       return '<span class="row" style="gap: 8px; align-items: baseline; white-space: nowrap">' +
-        '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: #C9B37E">' + esc(x.label) + '</span>' +
+        '<span class="cz" style="font-size: 12px; letter-spacing: .2em; color: var(--gold)">' + esc(x.label) + '</span>' +
         '<span class="cz" style="font-size: 19px">' + x.price.toFixed(2) + '</span>' +
         '<span style="font-size: 14px; color: ' + col + '">' + (up ? '▲ ' : '▼ ') + Math.abs(x.change).toFixed(2) + '%</span></span>';
     }).join('') + '</div></div>';
@@ -601,7 +637,7 @@ function renderFantasy() {
   var el = $('fantasy'), list = FANTASY || [];
   if (!list.length) { el.innerHTML = ''; return; }
   var n = function (v) { return v == null ? '–' : (Math.round(v * 10) / 10).toFixed(1); };
-  var GOLD = '#C9B37E', TEXT = '#F3E9D2', SOFT = '#A9A2C6';
+  var GOLD = 'var(--gold)', TEXT = 'var(--text)', SOFT = 'var(--muted)';
   var RED = '#E57373', AMBER = '#E3B341', GREEN = '#7BC47F';
 
   var cells = list.map(function (f) {
@@ -617,7 +653,7 @@ function renderFantasy() {
               (f.last ? n(-f.gap) + ' behind' : '+' + n(f.gap) + ' over last');
       }
     } else if (f.opp) {
-      score = n(f.me) + '<span style="color: #8C84A8; margin: 0 6px">–</span>' + n(f.opp.pts);
+      score = n(f.me) + '<span style="color: var(--muted2); margin: 0 6px">–</span>' + n(f.opp.pts);
       if (f.proj != null || f.opp.proj != null) proj = 'proj ' + n(f.proj) + ' – ' + n(f.opp.proj);
       ctx = 'vs ' + f.opp.name;
       if (f.me < f.opp.pts) color = RED;
@@ -635,7 +671,7 @@ function renderFantasy() {
   });
 
   el.innerHTML = '<div class="box row" style="gap: 20px; padding: 10px 20px; border-radius: 14px; align-items: stretch; margin-bottom: 10px">' +
-    cells.join('<span style="width: 1px; background: #4A4466; flex: none"></span>') + '</div>';
+    cells.join('<span style="width: 1px; background: var(--line); flex: none"></span>') + '</div>';
 }
 
 // ------------------------------------------------------------ NBA (fetched by the tablet itself; ESPN blocks Google's servers)
@@ -827,9 +863,9 @@ function renderNews(now) {
       '<span class="muted" style="font-size: 13px">' + esc(when) + ' · tap to read</span></div>' +
     NEWS.stories.slice(0, 3).map(function (s) {
       return '<div class="row" style="gap: 8px; font-size: 17px; line-height: 1.25">' +
-        '<span style="color: #C9B37E; flex: none">•</span>' +
+        '<span style="color: var(--gold); flex: none">•</span>' +
         '<span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">' +
-          (s.update ? '<span style="color: #C9B37E">Update: </span>' : '') + esc(s.board || s.headline) + '</span></div>';
+          (s.update ? '<span style="color: var(--gold)">Update: </span>' : '') + esc(s.board || s.headline) + '</span></div>';
     }).join('') + '</div>';
   $('newsBox').onclick = openNews;
 }
@@ -849,7 +885,8 @@ function openNews() {
     ((NEWS.quick_hits || []).length ? '<div class="st"><b>Quick hits:</b>' + NEWS.quick_hits.map(function (q) { return '<div>• ' + esc(q) + '</div>'; }).join('') + '</div>' : '') +
     (NEWS.big_picture ? '<div class="st"><b>Big picture today:</b> ' + esc(NEWS.big_picture) + '</div>' : '') +
     '</div>';
-  if (ART.parchment) el.querySelector('.sheet').style.background = '#F1E6CC url(' + ART.parchment + ') center / cover';
+  el.querySelector('.sheet').style.background = THEMES[THEME_APPLIED] && ART.parchment ? 'var(--panel) url(' + ART.parchment + ') center / cover' : 'var(--panel)';
+  el.querySelector('.sheet').style.color = 'var(--ink)';
   el.className = '';
   el.onclick = function () { el.className = 'hidden'; };
   setTimeout(function () { el.className = 'hidden'; }, 3 * 60 * 1000);   // closes itself after 3 minutes
@@ -860,11 +897,11 @@ setInterval(loadNews, 10 * 60 * 1000);
 
 // First run: ask for the board link.
 function showSetup() {
-  document.body.innerHTML = '<div style="max-width: 640px; margin: 80px auto; padding: 0 24px; font-family: Georgia, serif; color: #F3E9D2">' +
+  document.body.innerHTML = '<div style="max-width: 640px; margin: 80px auto; padding: 0 24px; font-family: Georgia, serif; color: var(--text)">' +
     '<h1 style="font-weight: 500">Family board setup</h1>' +
     '<p>Paste your board link (it ends in <b>/exec?k=</b> and your key), then tap Save.</p>' +
-    '<input id="lnk" style="width: 100%; box-sizing: border-box; font-size: 18px; padding: 12px; border-radius: 8px; border: 1px solid #4A4466">' +
-    '<p><button id="sv" style="font-size: 20px; padding: 12px 28px; border-radius: 8px; border: 0; background: #C9B37E; color: #1C1A2E">Save</button></p>' +
+    '<input id="lnk" style="width: 100%; box-sizing: border-box; font-size: 18px; padding: 12px; border-radius: 8px; border: 1px solid var(--line)">' +
+    '<p><button id="sv" style="font-size: 20px; padding: 12px 28px; border-radius: 8px; border: 0; background: var(--gold); color: var(--bg)">Save</button></p>' +
     '<p id="msg" style="color: #E8907F"></p></div>';
   document.getElementById('sv').onclick = function () {
     var v = document.getElementById('lnk').value.trim();
