@@ -1,75 +1,62 @@
 {
-  "edition": "Evening",
-  "generated": "2026-11-22T23:41:49Z",
-  "title": "Evening Brief — Sun 22 Nov",
+  "edition": "Morning",
+  "generated": "2026-11-23T14:55:00Z",
+  "title": "Morning Brief — Mon 23 Nov",
   "stories": [
     {
-      "board": "World climate talks end with no deal",
-      "headline": "COP31 climate meeting in Turkey falls apart",
-      "what": "After two weeks plus two extra days, countries rejected the final plan on Sunday. The fight was over whether to name fossil fuels (oil, coal and gas). It is the first time since 2009 that these UN talks ended with no shared deal.",
-      "why": "These meetings are how the world agrees on ways to slow global warming.",
-      "sides": "The EU, Panama and small island nations refused a plan that skips fossil fuels; Saudi Arabia and Russia backed leaving them out. UN chief Guterres called it deeply disappointing.",
-      "update": true,
-      "sources": [
-        {
-          "name": "UN News",
-          "url": "https://news.un.org/en/story/2026/11/1168855"
-        },
-        {
-          "name": "ABC News (Australia), with Reuters and AP",
-          "url": "https://www.abc.net.au/news/2026-11-23/cop31-talks-break-down-in-longest-ever-un-climate-debate/107414772"
-        },
-        {
-          "name": "CBC News",
-          "url": "https://www.cbc.ca/news/world/cop31-talks-collapse-fossil-fuel-9.7431847"
-        }
-      ]
-    },
-    {
-      "board": "Netanyahu and Eisenkot talk 4 hours, no deal",
-      "headline": "Israel unity talks end without a deal, more talks planned",
-      "what": "Likud and Eisenkot's Yashar party met for over four hours in Herzliya but did not agree. They plan to meet again, maybe Monday.",
-      "why": "The result decides who leads Israel's next government.",
-      "sides": "Both still want to be prime minister first; they also split on Ben-Gvir joining and on who picks the October 7 inquiry (official investigation) team.",
-      "update": true,
-      "sources": [
-        {
-          "name": "Ynetnews",
-          "url": "https://www.ynetnews.com/article/hj11rtyeyql"
-        },
-        {
-          "name": "Ynetnews",
-          "url": "https://www.ynetnews.com/article/byvciuykqe"
-        }
-      ]
-    },
-    {
-      "board": "Ottawa keeps fighting Stellantis Brampton plant sale",
-      "headline": "Canada and Ontario push Stellantis on Brampton car plant",
-      "what": "Stellantis wants to sell its closed Brampton car plant to Roshel, an armoured vehicle maker. Friday's meeting with Ottawa, Ontario and the union ended with only more talks planned.",
-      "why": "About 2,000 laid-off workers and at least 222 million dollars of public money are at stake.",
-      "sides": "No major disagreement between parties: Carney called the sale a betrayal, and Ontario and the Unifor union are pushing back with Ottawa; Stellantis says nothing has changed.",
+      "board": "Stocks bounce back after big AI selloff",
+      "headline": "Stock prices point up after a very bad week for AI companies",
+      "what": "Last week the S&P 500 fell 8.6 percent, its worst week in a long time, as AI and chip company stocks dropped. This morning futures (early bets on where prices go) are up strongly, led by Nvidia.",
+      "why": "Many people's savings and retirement money are tied to these big tech stocks.",
+      "sides": "No major disagreement: outlets on all sides report the drop and the bounce; worries include a reported SEC (US money watchdog) probe of Nvidia's accounting.",
       "update": false,
       "sources": [
-        {
-          "name": "Global News",
-          "url": "https://globalnews.ca/news/12143427/stellantis-roshel-brampton-assembly-plant-deal/"
-        },
-        {
-          "name": "Money.ca",
-          "url": "https://money.ca/news/economy/stellantis-brampton-plant-sale-ottawa-public-funds"
-        },
-        {
-          "name": "Yahoo News Canada",
-          "url": "https://ca.news.yahoo.com/stellantis-meeting-challenging-productive-premier-233701257.html"
-        }
+        { "name": "Fox Business", "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026" },
+        { "name": "The Globe and Mail", "url": "https://www.theglobeandmail.com/investing/markets/inside-the-market/market-news/article-premarket-us-futures-rally-as-ai-rout-pauses/" },
+        { "name": "Reuters via Investing.com", "url": "https://www.investing.com/news/economy-news/exclusiveus-secs-nvidia-probe-is-examining-potential-accounting-issues-sources-say-5042460" }
+      ]
+    },
+    {
+      "board": "Mexico catches top cartel boss El Chapo Isidro",
+      "headline": "Mexico's army captures one of the FBI's 10 most wanted",
+      "what": "Soldiers caught Fausto Isidro Meza-Flores, a Sinaloa drug cartel (crime gang) leader, in a Friday night raid. Fighting followed in Sinaloa, and four soldiers were killed.",
+      "why": "His gang is accused of moving drugs into the US, and the US had offered up to 5 million dollars for him.",
+      "sides": "No major disagreement: Mexico and the US both say US intelligence (secret information) helped.",
+      "update": false,
+      "sources": [
+        { "name": "CBS News", "url": "https://www.cbsnews.com/news/mexico-drug-kingpin-arrest-fausto-isidro-meza-flores-sinaloa/" },
+        { "name": "PBS NewsHour (AP)", "url": "https://www.pbs.org/newshour/world/mexico-detains-top-cartel-boss-el-chapo-isidro-setting-off-a-burst-of-violence-in-sinaloa" },
+        { "name": "Washington Times", "url": "https://www.washingtontimes.com/news/2026/nov/21/wanted-cartel-leader-captured-mexico-bloody-shootout-left-11-dead/" }
+      ]
+    },
+    {
+      "board": "CrowdStrike to buy Zscaler for $44 billion",
+      "headline": "Two big cybersecurity companies plan to join together",
+      "what": "CrowdStrike agreed to buy Zscaler for about 44 billion US dollars, paid in its own shares instead of cash. Both companies protect computers and networks from hackers.",
+      "why": "It would make one of the biggest cybersecurity (computer safety) companies in the world.",
+      "sides": "No major disagreement; regulators (government rule checkers) still have to approve it.",
+      "update": false,
+      "sources": [
+        { "name": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-11-23/crowdstrike-reaches-44-billion-cybersecurity-deal-for-zscaler" },
+        { "name": "Fast Company", "url": "https://www.fastcompany.com/91647412/crowdstrike-is-buying-zscaler-to-create-a-cybersecurity-giant-built-for-the-era-of-ai-agents" }
+      ]
+    },
+    {
+      "board": "Israel unity talks stuck; Eisenkot deadline Dec 6",
+      "headline": "Israel still has no new government after Netanyahu-Eisenkot talks",
+      "what": "Sunday's four-hour talks ended with no deal. Eisenkot has until Dec 6 (maybe Dec 20) to form a government, and says he may form an emergency (minority) government if talks fail.",
+      "why": "This decides who leads Israel next.",
+      "sides": "Each camp blames the other: they still split on Ben-Gvir, court laws and who is prime minister first.",
+      "update": true,
+      "sources": [
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/rke0yyzkxl" }
       ]
     }
   ],
   "quick_hits": [
-    "Flu is rising in Canada: 14.5 percent of flu tests came back positive in the week to Nov. 14.",
-    "PM Carney brought a Trump impersonator (actor who copies him) on stage to joke at Ottawa's press dinner.",
-    "Ottawa gave Stellantis until about Dec. 12 to pay back subsidy (government help) money or face legal action."
+    "Ontario set late-November heat records on Saturday; now lake-effect snow (snow made over warm lakes) hits snowbelts, with only flurries for Toronto.",
+    "Bahrain says an Iranian attack hit an industrial site and hurt two people; tankers (oil ships) were also hit near Hormuz.",
+    "Toronto Jewish security leaders say the community needs about 50 million dollars more for safety upgrades as threats rise."
   ],
-  "big_picture": "A day of stuck talks: the world on climate, Israel on its next government, and Canada on its car jobs."
+  "big_picture": "After a scary week, markets are catching their breath, while Israel's government talks are still stuck."
 }
