@@ -576,7 +576,14 @@ var THEME_APPLIED = null;
 var THEMES = { storybook: true, midnight: false, nordic: false, terracotta: false };   // true = uses the artwork
 function applyTheme() {
   var q = (location.search.match(/[?&]theme=([a-z]+)/) || [])[1];
-  var t = q || clientCfg().THEME || 'storybook';
+  var C = clientCfg(), t = q || C.THEME || 'storybook';
+  if (!q && C.THEME_EVENING) {
+    // Evening theme from EVENING_FROM until MORNING_FROM (Toronto time), day theme otherwise
+    var hm = new Intl.DateTimeFormat('en-GB', { timeZone: 'America/Toronto', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date());
+    var from = C.EVENING_FROM || '19:00', to = C.MORNING_FROM || '06:00';
+    var evening = from > to ? (hm >= from || hm < to) : (hm >= from && hm < to);
+    if (evening) t = C.THEME_EVENING;
+  }
   if (!(t in THEMES)) t = 'storybook';
   if (t === THEME_APPLIED) return;
   THEME_APPLIED = t;
@@ -596,6 +603,7 @@ var CLIENT_STARTED = false;
 function startClientFeeds() {
   if (CLIENT_STARTED) return;
   CLIENT_STARTED = true;
+  setInterval(applyTheme, 60 * 1000);   // switches day/evening theme on time
   loadNba(); loadFantasy();
   setInterval(loadNba, 2 * 60 * 1000);
   setInterval(loadFantasy, 2 * 60 * 1000);
