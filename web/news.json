@@ -1,37 +1,52 @@
 {
-  "edition": "Midday",
-  "generated": "2026-11-24T17:40:00Z",
-  "title": "Midday Brief — Tue 24 Nov",
+  "edition": "Evening",
+  "generated": "2026-11-24T23:45:00Z",
+  "title": "Evening Brief — Tue 24 Nov",
   "stories": [
     {
-      "board": "Chip stocks tumble a day after record jump",
-      "headline": "Tech stocks fall hard as Monday's Nvidia party ends",
-      "what": "The Nasdaq (a list of mostly tech companies) is down about 2 percent at midday, and Nvidia is down about 8 percent. Monday was the best day in many months after Nvidia brought back Jensen Huang as boss.",
-      "why": "Many retirement and savings funds hold these big tech stocks, so big swings move a lot of people's money.",
-      "sides": "No major disagreement; experts say investors are taking profits (selling to lock in gains) after a huge jump.",
+      "board": "Eisenkot signs first partner; Golan walks away",
+      "headline": "Israel's Eisenkot wins his first coalition partner, but loses another",
+      "what": "Gadi Eisenkot's Yashar party agreed to a coalition deal (a deal to govern together) with Avigdor Liberman's party. On the same night, Yair Golan's Democrats stopped talks with Eisenkot because he is also talking with Netanyahu's Likud.",
+      "why": "Eisenkot has until about Dec 6 to form a government, and these moves decide if Israel gets a new leader or a shared one with Netanyahu.",
+      "sides": "Wire reports call it Eisenkot's first real deal; right-leaning Israel National News calls it an opposition crisis; Golan calls the Likud talks a sham.",
       "update": true,
       "sources": [
-        { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html" },
-        { "name": "CNBC", "url": "https://cnbc.com/2026/11/24/stocks-moving-the-most-today-live-updates.html" }
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/r1k4gdxy7e" },
+        { "name": "Reuters (via WBOW)", "url": "https://1027wbow.com/2026/11/24/israels-eisenkot-clinches-first-coalition-agreement-in-bid-to-form-government/" },
+        { "name": "Israel National News", "url": "https://www.israelnationalnews.com/news/437052" }
       ]
     },
     {
-      "board": "Israel's top judge slams violent settler rioters",
-      "headline": "Israel's Supreme Court says violent settlers act like militias",
-      "what": "Chief Justice Yitzhak Amit said groups burning Palestinian fields and olive trees act like militias (armed private groups) and hurt Israel. The court ordered the army and police to explain under oath what they are doing to stop it.",
-      "why": "Israel's army chief also warned this violence harms Israel's safety, and it adds pressure on the government to act.",
-      "sides": "Centrist and left outlets stress the court's warning; right-leaning outlets report the court condemning rioters, while Defence Minister Katz says police, not the army, should handle it.",
+      "board": "Chips sink, Dow tops 50,000, Anthropic slips",
+      "headline": "Tech stocks fall at the close while the Dow climbs back over 50,000",
+      "what": "Nvidia fell about 6 percent and the Nasdaq (mostly tech companies) fell about 1.5 percent. The Dow rose about 0.9 percent to 50,018, and new AI company Anthropic closed at 81.91 dollars, below its 83 dollar IPO price (the price when it first sold shares).",
+      "why": "Investors moved money out of AI chip companies and into others, which shows how jumpy people are about AI right now.",
+      "sides": "No major disagreement on the numbers; some right-leaning outlets say Anthropic's high costs raise doubts about AI profits, while many analysts stay positive on it.",
+      "update": true,
+      "sources": [
+        { "name": "BigGo Finance", "url": "https://finance.biggo.com/news/efa4550f-327b-4612-b151-77555e7d62dd" },
+        { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html" },
+        { "name": "Daily Caller", "url": "https://dailycaller.com/2026/11/24/anthropic-sinks-13-as-buyers-at-its-opening-trade-lose-nearly-a-third/" },
+        { "name": "CNBC", "url": "https://www.cnbc.com/2026/11/24/anthropic-stock-ipo-price.html" }
+      ]
+    },
+    {
+      "board": "Nvidia boss Huang to testify Dec 3",
+      "headline": "Lawmakers from both parties call Nvidia's Jensen Huang to testify",
+      "what": "Huang is set to answer questions in public at the Senate Banking Committee on Dec. 3, and talk to three House committees. This follows his return as Nvidia boss, which Trump pushed for, after worries about his ties to a woman officials thought was a spy.",
+      "why": "Nvidia makes the chips that power most AI, so questions about China and national security (keeping the country safe) matter a lot.",
+      "sides": "Democrats like Elizabeth Warren call it reckless, and some Republicans also have questions; Trump says the board did what he wanted.",
       "update": false,
       "sources": [
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/syfibjmkxx" },
-        { "name": "Times of Israel", "url": "https://www.timesofisrael.com/liveblog_entry/supreme-court-president-blasts-settler-violence-as-desecration-of-gods-name-a-threat-to-zionist-vision-which-fuels-antisemitism/" },
-        { "name": "Israel National News", "url": "https://www.israelnationalnews.com/news/436997" }
+        { "name": "PBS NewsHour (AP)", "url": "https://www.pbs.org/newshour/politics/huangs-reinstatement-at-nvidia-sparks-fury-in-congress-as-lawmakers-move-forward-with-hearings" },
+        { "name": "NBC News", "url": "https://nbcnews.com/politics/trump-administration/live-blog/trump-white-house-congress-2026-live-updates-rcna611009" }
       ]
     }
   ],
   "quick_hits": [
-    "Israel says it hit a top Hamas security chief in Gaza City today; Palestinian reports say he was killed.",
-    "Jared Kushner, Trump's Middle East adviser, warned Israel could become a global pariah (a country others shun) if the Gaza plan stays stuck."
+    "Canada's government has not yet answered the Pentagon's sharp complaint about Canada's military spending and F-35 jet review.",
+    "Ukraine's President Zelensky says he is ready for four-way peace talks with Russia, Europe and the US as soon as possible.",
+    "Israel's Likud and Eisenkot's party plan a third round of unity talks on Wednesday."
   ],
-  "big_picture": "After a wild Monday, markets cooled off, while Israel faces tough warnings from its own court and its US friends."
+  "big_picture": "Israel's next government is still up for grabs, and the AI boom is getting a bumpy ride on Wall Street and in Congress."
 }
