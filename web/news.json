@@ -1,52 +1,52 @@
 {
-  "edition": "Evening",
-  "generated": "2026-11-24T23:45:00Z",
-  "title": "Evening Brief — Tue 24 Nov",
+  "edition": "Morning",
+  "generated": "2026-11-25T13:50:00Z",
+  "title": "Morning Brief — Wed 25 Nov",
   "stories": [
     {
-      "board": "Eisenkot signs first partner; Golan walks away",
-      "headline": "Israel's Eisenkot wins his first coalition partner, but loses another",
-      "what": "Gadi Eisenkot's Yashar party agreed to a coalition deal (a deal to govern together) with Avigdor Liberman's party. On the same night, Yair Golan's Democrats stopped talks with Eisenkot because he is also talking with Netanyahu's Likud.",
-      "why": "Eisenkot has until about Dec 6 to form a government, and these moves decide if Israel gets a new leader or a shared one with Netanyahu.",
-      "sides": "Wire reports call it Eisenkot's first real deal; right-leaning Israel National News calls it an opposition crisis; Golan calls the Likud talks a sham.",
-      "update": true,
-      "sources": [
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/r1k4gdxy7e" },
-        { "name": "Reuters (via WBOW)", "url": "https://1027wbow.com/2026/11/24/israels-eisenkot-clinches-first-coalition-agreement-in-bid-to-form-government/" },
-        { "name": "Israel National News", "url": "https://www.israelnationalnews.com/news/437052" }
-      ]
-    },
-    {
-      "board": "Chips sink, Dow tops 50,000, Anthropic slips",
-      "headline": "Tech stocks fall at the close while the Dow climbs back over 50,000",
-      "what": "Nvidia fell about 6 percent and the Nasdaq (mostly tech companies) fell about 1.5 percent. The Dow rose about 0.9 percent to 50,018, and new AI company Anthropic closed at 81.91 dollars, below its 83 dollar IPO price (the price when it first sold shares).",
-      "why": "Investors moved money out of AI chip companies and into others, which shows how jumpy people are about AI right now.",
-      "sides": "No major disagreement on the numbers; some right-leaning outlets say Anthropic's high costs raise doubts about AI profits, while many analysts stay positive on it.",
-      "update": true,
-      "sources": [
-        { "name": "BigGo Finance", "url": "https://finance.biggo.com/news/efa4550f-327b-4612-b151-77555e7d62dd" },
-        { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html" },
-        { "name": "Daily Caller", "url": "https://dailycaller.com/2026/11/24/anthropic-sinks-13-as-buyers-at-its-opening-trade-lose-nearly-a-third/" },
-        { "name": "CNBC", "url": "https://www.cnbc.com/2026/11/24/anthropic-stock-ipo-price.html" }
-      ]
-    },
-    {
-      "board": "Nvidia boss Huang to testify Dec 3",
-      "headline": "Lawmakers from both parties call Nvidia's Jensen Huang to testify",
-      "what": "Huang is set to answer questions in public at the Senate Banking Committee on Dec. 3, and talk to three House committees. This follows his return as Nvidia boss, which Trump pushed for, after worries about his ties to a woman officials thought was a spy.",
-      "why": "Nvidia makes the chips that power most AI, so questions about China and national security (keeping the country safe) matter a lot.",
-      "sides": "Democrats like Elizabeth Warren call it reckless, and some Republicans also have questions; Trump says the board did what he wanted.",
+      "board": "New Trump tariffs coming; tech stocks slide",
+      "headline": "US gets ready for new tariffs, and tech stock futures drop",
+      "what": "The Trump team plans new tariffs (extra taxes on goods from other countries) on China, the EU and about 14 more places, maybe this week. Nasdaq futures (bets on where tech stocks will open) fell over 2 percent, and Nvidia fell about 5 percent before the bell.",
+      "why": "Tariffs can raise prices, and AI and chip stocks were already falling.",
+      "sides": "Bloomberg says the new tariffs will be targeted and no higher than trade-deal levels; right-leaning Townhall notes most voters in an exit poll said the trade war hurt the economy.",
       "update": false,
       "sources": [
-        { "name": "PBS NewsHour (AP)", "url": "https://www.pbs.org/newshour/politics/huangs-reinstatement-at-nvidia-sparks-fury-in-congress-as-lawmakers-move-forward-with-hearings" },
-        { "name": "NBC News", "url": "https://nbcnews.com/politics/trump-administration/live-blog/trump-white-house-congress-2026-live-updates-rcna611009" }
+        { "name": "Reuters (via Yahoo Finance)", "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-slide-over-2-100822079.html" },
+        { "name": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-11-24/new-trump-tariffs-won-t-top-trade-deal-levels-will-be-targeted" },
+        { "name": "Townhall", "url": "https://townhall.com/news/dmitri-bolt/2026/11/24/new-tariffs-n2686985" }
+      ]
+    },
+    {
+      "board": "Canada to Pentagon: We don't report to you",
+      "headline": "Canada pushes back after the Pentagon criticizes its military",
+      "what": "Defence Minister David McGuinty answered a Pentagon complaint about Canada's spending, ready-to-use equipment and its review of F-35 fighter jets. He said Canada is on track to spend 5 percent of GDP (the size of the whole economy) on defence by 2035.",
+      "why": "Canada and the US defend North America together through NORAD, so a fight between them matters.",
+      "sides": "Wire services and CTV report it plainly; right-leaning outlets say Canada fired back, and the Pentagon says it will do what it must if it cannot rely on Canada.",
+      "update": true,
+      "sources": [
+        { "name": "CTV News", "url": "https://www.ctvnews.ca/politics/article/we-dont-report-to-the-united-states-defence-minister-following-pentagon-defence-spending-fact-sheet/" },
+        { "name": "PBS NewsHour (AP)", "url": "https://www.pbs.org/newshour/world/pentagon-sharply-criticizes-canada-over-modernizing-military" },
+        { "name": "WLT Report", "url": "https://wltreport.com/2026/11/25/canada-pentagon-defense-f35-warning-response/" }
+      ]
+    },
+    {
+      "board": "Eisenkot-Netanyahu talks: still no deal",
+      "headline": "Israel's unity talks end another round without a deal",
+      "what": "Teams for Gadi Eisenkot and Benjamin Netanyahu met again and agreed to keep talking, but still did not agree. They are stuck on who is prime minister first, whether Ben-Gvir's far-right party joins, and who picks the October 7 inquiry (an official investigation).",
+      "why": "Eisenkot has only until early December to build a government, or Israel may face more political trouble.",
+      "sides": "Eisenkot's side says Netanyahu is stalling; Likud says it wants a wide unity government; Eisenkot says he may form an emergency government without Likud.",
+      "update": true,
+      "sources": [
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/bkbstgmk7x" },
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/hj11rtyeyql" },
+        { "name": "Times of Israel", "url": "https://www.timesofisrael.com/liveblog_entry/representatives-of-eisenkot-netanyahu-meet-for-third-round-of-unity-talks/" }
       ]
     }
   ],
   "quick_hits": [
-    "Canada's government has not yet answered the Pentagon's sharp complaint about Canada's military spending and F-35 jet review.",
-    "Ukraine's President Zelensky says he is ready for four-way peace talks with Russia, Europe and the US as soon as possible.",
-    "Israel's Likud and Eisenkot's party plan a third round of unity talks on Wednesday."
+    "Michigan has frozen permits for Enbridge's Line 5 oil pipeline tunnel, which carries Canadian oil.",
+    "The Weather Network expects a milder winter than usual across much of Canada.",
+    "US stock markets close Thursday for American Thanksgiving, and a key inflation report comes out this morning."
   ],
-  "big_picture": "Israel's next government is still up for grabs, and the AI boom is getting a bumpy ride on Wall Street and in Congress."
+  "big_picture": "Trade and defence fights with the US are back in the news, while Israel still waits for a new government."
 }
