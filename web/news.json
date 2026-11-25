@@ -1,52 +1,49 @@
 {
-  "edition": "Morning",
-  "generated": "2026-11-25T13:50:00Z",
-  "title": "Morning Brief — Wed 25 Nov",
+  "edition": "Midday",
+  "generated": "2026-11-25T17:30:00Z",
+  "title": "Midday Brief — Wed 25 Nov",
   "stories": [
     {
-      "board": "New Trump tariffs coming; tech stocks slide",
-      "headline": "US gets ready for new tariffs, and tech stock futures drop",
-      "what": "The Trump team plans new tariffs (extra taxes on goods from other countries) on China, the EU and about 14 more places, maybe this week. Nasdaq futures (bets on where tech stocks will open) fell over 2 percent, and Nvidia fell about 5 percent before the bell.",
-      "why": "Tariffs can raise prices, and AI and chip stocks were already falling.",
-      "sides": "Bloomberg says the new tariffs will be targeted and no higher than trade-deal levels; right-leaning Townhall notes most voters in an exit poll said the trade war hurt the economy.",
+      "board": "New US tariffs hit 14 places, not Canada",
+      "headline": "US announces new tariffs, and Canada is left out",
+      "what": "The US proposed new tariffs (extra taxes on goods from other countries) of up to 20 percent on China, the EU, Japan, South Korea and 10 more places. Canada and Mexico are not on the list.",
+      "why": "Canada dodged this round, and the US trade boss says a deal with Canada is close.",
+      "sides": "The White House says other countries make too much cheap stuff; critics and right-leaning Townhall warn tariffs could push prices higher.",
+      "update": true,
+      "sources": [
+        { "name": "Baystreet.ca", "url": "https://www.baystreet.ca/articles/economiccommentary/125643/canada-excluded-from-new-us-tariffs" },
+        { "name": "Fox Business", "url": "https://www.foxbusiness.com/fox-news-global-economy/trump-admin-raise-tariffs-china-eu-other-trading-partners" },
+        { "name": "NBC News", "url": "https://www.nbcnews.com/business/economy/trump-country-specific-tariffs-excess-capacity-rcna611087" }
+      ]
+    },
+    {
+      "board": "Prices rise faster; tech stocks tumble",
+      "headline": "Hot inflation report and tariffs knock US stocks down",
+      "what": "A key US price report showed core inflation (price rises, not counting food and fuel) at 3.3 percent, a bit higher than expected. By midday the Nasdaq was down about 3 percent and Nvidia about 8 percent.",
+      "why": "Traders now expect the US Federal Reserve to raise interest rates in December, which makes borrowing cost more.",
+      "sides": "No major disagreement on the numbers; Townhall points out the economy also grew fast, at 4.3 percent last summer.",
+      "update": true,
+      "sources": [
+        { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html" },
+        { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/economy/policy/article/feds-favored-inflation-gauge-heats-up-solidifying-a-rate-hike-in-december-with-more-likely-next-year-135510084.html" },
+        { "name": "Townhall", "url": "https://townhall.com/news/dmitri-bolt/2026/11/25/gdp-inflation-report-n2687063" }
+      ]
+    },
+    {
+      "board": "Judge doubts main Netanyahu corruption charge",
+      "headline": "Israeli judge says the biggest Netanyahu charge looks weak",
+      "what": "A judge in Netanyahu's corruption trial said a guilty verdict in the most serious case looks unlikely, and urged a deal (an agreement to end it) in another case. No charges have been dropped yet.",
+      "why": "It could change Netanyahu's future just as Israel tries to form a new government.",
+      "sides": "Netanyahu says the trial collapsed; the Attorney General says prosecutors will review it and the case must end in a verdict or a deal.",
       "update": false,
       "sources": [
-        { "name": "Reuters (via Yahoo Finance)", "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-futures-slide-over-2-100822079.html" },
-        { "name": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-11-24/new-trump-tariffs-won-t-top-trade-deal-levels-will-be-targeted" },
-        { "name": "Townhall", "url": "https://townhall.com/news/dmitri-bolt/2026/11/24/new-tariffs-n2686985" }
-      ]
-    },
-    {
-      "board": "Canada to Pentagon: We don't report to you",
-      "headline": "Canada pushes back after the Pentagon criticizes its military",
-      "what": "Defence Minister David McGuinty answered a Pentagon complaint about Canada's spending, ready-to-use equipment and its review of F-35 fighter jets. He said Canada is on track to spend 5 percent of GDP (the size of the whole economy) on defence by 2035.",
-      "why": "Canada and the US defend North America together through NORAD, so a fight between them matters.",
-      "sides": "Wire services and CTV report it plainly; right-leaning outlets say Canada fired back, and the Pentagon says it will do what it must if it cannot rely on Canada.",
-      "update": true,
-      "sources": [
-        { "name": "CTV News", "url": "https://www.ctvnews.ca/politics/article/we-dont-report-to-the-united-states-defence-minister-following-pentagon-defence-spending-fact-sheet/" },
-        { "name": "PBS NewsHour (AP)", "url": "https://www.pbs.org/newshour/world/pentagon-sharply-criticizes-canada-over-modernizing-military" },
-        { "name": "WLT Report", "url": "https://wltreport.com/2026/11/25/canada-pentagon-defense-f35-warning-response/" }
-      ]
-    },
-    {
-      "board": "Eisenkot-Netanyahu talks: still no deal",
-      "headline": "Israel's unity talks end another round without a deal",
-      "what": "Teams for Gadi Eisenkot and Benjamin Netanyahu met again and agreed to keep talking, but still did not agree. They are stuck on who is prime minister first, whether Ben-Gvir's far-right party joins, and who picks the October 7 inquiry (an official investigation).",
-      "why": "Eisenkot has only until early December to build a government, or Israel may face more political trouble.",
-      "sides": "Eisenkot's side says Netanyahu is stalling; Likud says it wants a wide unity government; Eisenkot says he may form an emergency government without Likud.",
-      "update": true,
-      "sources": [
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/bkbstgmk7x" },
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/hj11rtyeyql" },
-        { "name": "Times of Israel", "url": "https://www.timesofisrael.com/liveblog_entry/representatives-of-eisenkot-netanyahu-meet-for-third-round-of-unity-talks/" }
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/hjhsf5vy7l" }
       ]
     }
   ],
   "quick_hits": [
-    "Michigan has frozen permits for Enbridge's Line 5 oil pipeline tunnel, which carries Canadian oil.",
-    "The Weather Network expects a milder winter than usual across much of Canada.",
-    "US stock markets close Thursday for American Thanksgiving, and a key inflation report comes out this morning."
+    "The US economy grew 4.3 percent in the summer quarter, the fastest in three years.",
+    "In Israel, Yair Golan's party paused coalition talks with Eisenkot, who has about 12 days left to form a government."
   ],
-  "big_picture": "Trade and defence fights with the US are back in the news, while Israel still waits for a new government."
+  "big_picture": "Trade, prices and stocks are shaking things up before American Thanksgiving, but Canada got a break on tariffs."
 }
