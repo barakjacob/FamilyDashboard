@@ -1,49 +1,50 @@
 {
-  "edition": "Midday",
-  "generated": "2026-11-25T17:30:00Z",
-  "title": "Midday Brief — Wed 25 Nov",
+  "edition": "Evening",
+  "generated": "2026-11-25T23:40:00Z",
+  "title": "Evening Brief — Wed 25 Nov",
   "stories": [
     {
-      "board": "New US tariffs hit 14 places, not Canada",
-      "headline": "US announces new tariffs, and Canada is left out",
-      "what": "The US proposed new tariffs (extra taxes on goods from other countries) of up to 20 percent on China, the EU, Japan, South Korea and 10 more places. Canada and Mexico are not on the list.",
-      "why": "Canada dodged this round, and the US trade boss says a deal with Canada is close.",
-      "sides": "The White House says other countries make too much cheap stuff; critics and right-leaning Townhall warn tariffs could push prices higher.",
+      "board": "Dow wipes out 1,100-point drop, ends up",
+      "headline": "Big comeback on Wall Street before Thanksgiving",
+      "what": "The Dow was down more than 1,100 points during the day but finished up 0.33 percent. The Nasdaq (a list of mostly tech companies) still ended down 0.62 percent.",
+      "why": "Worries about prices, AI spending and new tariffs (extra taxes on imports) are making markets jumpy. US markets are closed Thursday.",
+      "sides": "No major disagreement on the numbers; reports agree energy stocks led the bounce while tech stayed weak.",
       "update": true,
       "sources": [
-        { "name": "Baystreet.ca", "url": "https://www.baystreet.ca/articles/economiccommentary/125643/canada-excluded-from-new-us-tariffs" },
-        { "name": "Fox Business", "url": "https://www.foxbusiness.com/fox-news-global-economy/trump-admin-raise-tariffs-china-eu-other-trading-partners" },
-        { "name": "NBC News", "url": "https://www.nbcnews.com/business/economy/trump-country-specific-tariffs-excess-capacity-rcna611087" }
+        { "name": "Motley Fool", "url": "https://www.fool.com/coverage/stock-market-today/2026/11/25/stock-market-today-nov-25-dow-erases-1-100-point-loss-as-wall-street-stages-dramatic-late-day-comeback/" },
+        { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-25-221745503.html" }
       ]
     },
     {
-      "board": "Prices rise faster; tech stocks tumble",
-      "headline": "Hot inflation report and tariffs knock US stocks down",
-      "what": "A key US price report showed core inflation (price rises, not counting food and fuel) at 3.3 percent, a bit higher than expected. By midday the Nasdaq was down about 3 percent and Nvidia about 8 percent.",
-      "why": "Traders now expect the US Federal Reserve to raise interest rates in December, which makes borrowing cost more.",
-      "sides": "No major disagreement on the numbers; Townhall points out the economy also grew fast, at 4.3 percent last summer.",
-      "update": true,
-      "sources": [
-        { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html" },
-        { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/economy/policy/article/feds-favored-inflation-gauge-heats-up-solidifying-a-rate-hike-in-december-with-more-likely-next-year-135510084.html" },
-        { "name": "Townhall", "url": "https://townhall.com/news/dmitri-bolt/2026/11/25/gdp-inflation-report-n2687063" }
-      ]
-    },
-    {
-      "board": "Judge doubts main Netanyahu corruption charge",
-      "headline": "Israeli judge says the biggest Netanyahu charge looks weak",
-      "what": "A judge in Netanyahu's corruption trial said a guilty verdict in the most serious case looks unlikely, and urged a deal (an agreement to end it) in another case. No charges have been dropped yet.",
-      "why": "It could change Netanyahu's future just as Israel tries to form a new government.",
-      "sides": "Netanyahu says the trial collapsed; the Attorney General says prosecutors will review it and the case must end in a verdict or a deal.",
+      "board": "US jury finds Huawei guilty of stealing secrets",
+      "headline": "Chinese tech giant Huawei convicted in US court",
+      "what": "A US jury found Huawei guilty of conspiracy (secretly planning together) to steal American trade secrets, and of bank fraud. It was found not guilty of racketeering (running a crime ring).",
+      "why": "It is a big win for the US in its tech fight with China, which already has tense trade ties.",
+      "sides": "Right-leaning Fox Business stresses the theft and breaking Iran sanctions (rules banning trade); CBC and others stress that some charges did not stick.",
       "update": false,
       "sources": [
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/hjhsf5vy7l" }
+        { "name": "CBC News", "url": "https://www.cbc.ca/news/world/huawei-conspiracy-trade-secrets-ruling-9.7434554" },
+        { "name": "Fox Business", "url": "https://www.foxbusiness.com/fox-news-tech/federal-jury-convicts-huawei-stealing-us-trade-secrets-violating-iran-sanctions" },
+        { "name": "CNBC", "url": "https://www.cnbc.com/2026/11/25/huawei-fraud-trade-trial.html" }
+      ]
+    },
+    {
+      "board": "Eisenkot aims to swear in government next week",
+      "headline": "Israel's Eisenkot bloc says a new government is close",
+      "what": "Gadi Eisenkot's group plans to swear in a government next week with 61 seats, after Avigdor Liberman agreed to join. The Knesset (Israel's parliament) also took a first step on a term limit for prime ministers and an October 7 inquiry.",
+      "why": "It could end Netanyahu's long time as prime minister.",
+      "sides": "Eisenkot's side calls it a fix for democracy; Likud says the term-limit bill is aimed at Netanyahu. Yair Golan's party and Shas are still not on board.",
+      "update": true,
+      "sources": [
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/r1ellmn1xx" },
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/ry11wxreyme" }
       ]
     }
   ],
   "quick_hits": [
-    "The US economy grew 4.3 percent in the summer quarter, the fastest in three years.",
-    "In Israel, Yair Golan's party paused coalition talks with Eisenkot, who has about 12 days left to form a government."
+    "Iran's Revolutionary Guard says more oil tankers hit sea mines near the Strait of Hormuz; this has not been confirmed by others.",
+    "Israel's Defence Minister Katz says Iran is building chemical weapons and Israel will not allow it.",
+    "US stock markets are closed Thursday for American Thanksgiving and close early Friday."
   ],
-  "big_picture": "Trade, prices and stocks are shaking things up before American Thanksgiving, but Canada got a break on tariffs."
+  "big_picture": "A shaky but calm finish for markets, a big US court win against Huawei, and Israel may get a new leader soon."
 }
