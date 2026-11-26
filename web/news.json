@@ -1,50 +1,50 @@
 {
-  "edition": "Evening",
-  "generated": "2026-11-25T23:40:00Z",
-  "title": "Evening Brief — Wed 25 Nov",
+  "edition": "Morning",
+  "generated": "2026-11-26T13:26:00Z",
+  "title": "Morning Brief — Thu 26 Nov",
   "stories": [
     {
-      "board": "Dow wipes out 1,100-point drop, ends up",
-      "headline": "Big comeback on Wall Street before Thanksgiving",
-      "what": "The Dow was down more than 1,100 points during the day but finished up 0.33 percent. The Nasdaq (a list of mostly tech companies) still ended down 0.62 percent.",
-      "why": "Worries about prices, AI spending and new tariffs (extra taxes on imports) are making markets jumpy. US markets are closed Thursday.",
-      "sides": "No major disagreement on the numbers; reports agree energy stocks led the bounce while tech stayed weak.",
-      "update": true,
-      "sources": [
-        { "name": "Motley Fool", "url": "https://www.fool.com/coverage/stock-market-today/2026/11/25/stock-market-today-nov-25-dow-erases-1-100-point-loss-as-wall-street-stages-dramatic-late-day-comeback/" },
-        { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-25-221745503.html" }
-      ]
-    },
-    {
-      "board": "US jury finds Huawei guilty of stealing secrets",
-      "headline": "Chinese tech giant Huawei convicted in US court",
-      "what": "A US jury found Huawei guilty of conspiracy (secretly planning together) to steal American trade secrets, and of bank fraud. It was found not guilty of racketeering (running a crime ring).",
-      "why": "It is a big win for the US in its tech fight with China, which already has tense trade ties.",
-      "sides": "Right-leaning Fox Business stresses the theft and breaking Iran sanctions (rules banning trade); CBC and others stress that some charges did not stick.",
+      "board": "Judges cast doubt on Netanyahu's biggest charge",
+      "headline": "Big boost for Netanyahu in his corruption trial",
+      "what": "Israeli judges said a conviction (being found guilty) in Case 4000, the most serious case, looks unlikely. They asked prosecutors to rethink another case and to try to make a deal on the third.",
+      "why": "The trial has gone on since 2020, and it shapes who can lead Israel. Nothing has been dropped yet.",
+      "sides": "Netanyahu and right-leaning outlets say the trial fell apart; others stress the judges' words were only advice, not a verdict (final decision).",
       "update": false,
       "sources": [
-        { "name": "CBC News", "url": "https://www.cbc.ca/news/world/huawei-conspiracy-trade-secrets-ruling-9.7434554" },
-        { "name": "Fox Business", "url": "https://www.foxbusiness.com/fox-news-tech/federal-jury-convicts-huawei-stealing-us-trade-secrets-violating-iran-sanctions" },
-        { "name": "CNBC", "url": "https://www.cnbc.com/2026/11/25/huawei-fraud-trade-trial.html" }
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/hjhsf5vy7l" },
+        { "name": "Fox News", "url": "https://www.foxnews.com/world/netanyahu-declares-corruption-trial-fallen-apart-judges-question-key-charges" },
+        { "name": "The Jewish Chronicle", "url": "https://thejc.com/news/israel/judges-drop-charges-netanyahu-corruption-trial-egczyfy5" }
       ]
     },
     {
-      "board": "Eisenkot aims to swear in government next week",
-      "headline": "Israel's Eisenkot bloc says a new government is close",
-      "what": "Gadi Eisenkot's group plans to swear in a government next week with 61 seats, after Avigdor Liberman agreed to join. The Knesset (Israel's parliament) also took a first step on a term limit for prime ministers and an October 7 inquiry.",
-      "why": "It could end Netanyahu's long time as prime minister.",
-      "sides": "Eisenkot's side calls it a fix for democracy; Likud says the term-limit bill is aimed at Netanyahu. Yair Golan's party and Shas are still not on board.",
+      "board": "Storm brings heavy rain, ice to southern Ontario",
+      "headline": "Wet, windy and icy Thanksgiving Thursday in Ontario",
+      "what": "Weather warnings are out for southern Ontario. Heavy rain and wind gusts near 60 km/h are expected, and some areas could get freezing rain (rain that turns to ice) by Friday morning.",
+      "why": "Roads and sidewalks may be slippery and power could go out in spots.",
+      "sides": "No major disagreement.",
+      "update": false,
+      "sources": [
+        { "name": "insauga", "url": "https://www.insauga.com/weather-warnings-issued-ahead-of-storm-in-southern-ontario/" },
+        { "name": "Environment Canada", "url": "https://weather.gc.ca/en/location/index.html?coords=43.655%2C-79.383" }
+      ]
+    },
+    {
+      "board": "US probes Iran link to hacks on ships",
+      "headline": "US looks into hacking of up to 50 ships",
+      "what": "The US government is checking whether Iran is behind cyberattacks (computer break-ins) on as many as 50 commercial ships. Iran also says more tankers hit sea mines near the Strait of Hormuz, a key oil route.",
+      "why": "A lot of the world's oil passes there, so trouble can raise fuel prices.",
+      "sides": "No major disagreement; Iran's mine claims have not been confirmed by others.",
       "update": true,
       "sources": [
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/r1ellmn1xx" },
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/ry11wxreyme" }
+        { "name": "NPR", "url": "https://www.npr.org/2026/11/24/nx-s1-6052994/hack-commercial-vessels-iran" },
+        { "name": "Gulf News", "url": "https://gulfnews.com/world/mena/middle-east-conflict-us-investigates-iran-over-cyberattacks-on-50-ships-as-fresh-sanctions-target-irans-shadow-banking-network-1.500758688" }
       ]
     }
   ],
   "quick_hits": [
-    "Iran's Revolutionary Guard says more oil tankers hit sea mines near the Strait of Hormuz; this has not been confirmed by others.",
-    "Israel's Defence Minister Katz says Iran is building chemical weapons and Israel will not allow it.",
-    "US stock markets are closed Thursday for American Thanksgiving and close early Friday."
+    "Israel's Gadi Eisenkot wants deals with Bennett and Golan by Saturday so a new government can start next week (Ynetnews).",
+    "Storms and crowds are causing flight delays on American Thanksgiving; US stock markets are closed today.",
+    "Bank of Canada boss Tiff Macklem warned that past jumps in energy prices could still push prices up."
   ],
-  "big_picture": "A shaky but calm finish for markets, a big US court win against Huawei, and Israel may get a new leader soon."
+  "big_picture": "Netanyahu got good news in court while his rivals race to replace him, and here at home it is a stormy day."
 }
