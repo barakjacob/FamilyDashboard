@@ -1,50 +1,38 @@
 {
-  "edition": "Morning",
-  "generated": "2026-11-26T13:26:00Z",
-  "title": "Morning Brief — Thu 26 Nov",
+  "edition": "Midday",
+  "generated": "2026-11-26T17:35:00Z",
+  "title": "Midday Brief — Thu 26 Nov",
   "stories": [
     {
-      "board": "Judges cast doubt on Netanyahu's biggest charge",
-      "headline": "Big boost for Netanyahu in his corruption trial",
-      "what": "Israeli judges said a conviction (being found guilty) in Case 4000, the most serious case, looks unlikely. They asked prosecutors to rethink another case and to try to make a deal on the third.",
-      "why": "The trial has gone on since 2020, and it shapes who can lead Israel. Nothing has been dropped yet.",
-      "sides": "Netanyahu and right-leaning outlets say the trial fell apart; others stress the judges' words were only advice, not a verdict (final decision).",
-      "update": false,
-      "sources": [
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/hjhsf5vy7l" },
-        { "name": "Fox News", "url": "https://www.foxnews.com/world/netanyahu-declares-corruption-trial-fallen-apart-judges-question-key-charges" },
-        { "name": "The Jewish Chronicle", "url": "https://thejc.com/news/israel/judges-drop-charges-netanyahu-corruption-trial-egczyfy5" }
-      ]
-    },
-    {
-      "board": "Storm brings heavy rain, ice to southern Ontario",
-      "headline": "Wet, windy and icy Thanksgiving Thursday in Ontario",
-      "what": "Weather warnings are out for southern Ontario. Heavy rain and wind gusts near 60 km/h are expected, and some areas could get freezing rain (rain that turns to ice) by Friday morning.",
-      "why": "Roads and sidewalks may be slippery and power could go out in spots.",
-      "sides": "No major disagreement.",
-      "update": false,
-      "sources": [
-        { "name": "insauga", "url": "https://www.insauga.com/weather-warnings-issued-ahead-of-storm-in-southern-ontario/" },
-        { "name": "Environment Canada", "url": "https://weather.gc.ca/en/location/index.html?coords=43.655%2C-79.383" }
-      ]
-    },
-    {
-      "board": "US probes Iran link to hacks on ships",
-      "headline": "US looks into hacking of up to 50 ships",
-      "what": "The US government is checking whether Iran is behind cyberattacks (computer break-ins) on as many as 50 commercial ships. Iran also says more tankers hit sea mines near the Strait of Hormuz, a key oil route.",
-      "why": "A lot of the world's oil passes there, so trouble can raise fuel prices.",
-      "sides": "No major disagreement; Iran's mine claims have not been confirmed by others.",
+      "board": "Eisenkot signs deal with Golan's party",
+      "headline": "Eisenkot gets closer to forming a new Israeli government",
+      "what": "Gadi Eisenkot made a coalition deal (an agreement to govern together) with Yair Golan's Democrats party. The Democrats get several ministries but dropped their ask for the Justice Ministry.",
+      "why": "If Eisenkot gets 61 of 120 seats, Netanyahu would no longer be prime minister. He still needs more partners.",
+      "sides": "Eisenkot's camp says a new government could start next week; Netanyahu's Likud party now expects Eisenkot to form one without it, and Bennett warned against a rushed minority (too few seats) government.",
       "update": true,
       "sources": [
-        { "name": "NPR", "url": "https://www.npr.org/2026/11/24/nx-s1-6052994/hack-commercial-vessels-iran" },
-        { "name": "Gulf News", "url": "https://gulfnews.com/world/mena/middle-east-conflict-us-investigates-iran-over-cyberattacks-on-50-ships-as-fresh-sanctions-target-irans-shadow-banking-network-1.500758688" }
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/bkkxw6hjml" },
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/bk73k3gj7x" },
+        { "name": "Jerusalem Post", "url": "https://www.jpost.com/israel-news/politics-and-diplomacy/article-916196" }
+      ]
+    },
+    {
+      "board": "Zelenskyy warns big Russian power attack coming",
+      "headline": "Ukraine says Russia is getting ready for a huge strike",
+      "what": "Ukraine's leader Zelenskyy said Russia is almost ready for another big attack on power plants and supplies. Overnight, Russia fired missiles and 113 drones, and crews are fixing power in six regions.",
+      "why": "Winter is starting, and without power many Ukrainians lose heat and light.",
+      "sides": "No major disagreement. A US envoy says peace talks are stuck on who keeps which land.",
+      "update": false,
+      "sources": [
+        { "name": "AP via KSAT", "url": "https://www.ksat.com/news/2026/11/26/zelenskyy-warns-of-imminent-major-russian-attack-on-ukraines-power-grid/" },
+        { "name": "Washington Times", "url": "https://washingtontimes.com/news/2026/nov/26/volodymyr-zelenskyy-warns-imminent-major-russian-attack-ukraines" },
+        { "name": "Kyiv Independent", "url": "https://kyivindependent.com/russia-prepares-new-mass-attack-on-ukraines-energy-infrastructure-zelensky-says" }
       ]
     }
   ],
   "quick_hits": [
-    "Israel's Gadi Eisenkot wants deals with Bennett and Golan by Saturday so a new government can start next week (Ynetnews).",
-    "Storms and crowds are causing flight delays on American Thanksgiving; US stock markets are closed today.",
-    "Bank of Canada boss Tiff Macklem warned that past jumps in energy prices could still push prices up."
+    "For the first time in 100 years, the Macy's Thanksgiving parade in New York was moved because of a storm; it now runs Saturday.",
+    "EU leaders are meeting in Brussels and are split over how to keep paying to help Ukraine."
   ],
-  "big_picture": "Netanyahu got good news in court while his rivals race to replace him, and here at home it is a stormy day."
+  "big_picture": "Israel may be days from a new government, while Ukraine braces for a hard, cold winter."
 }
