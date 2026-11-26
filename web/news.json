@@ -1,38 +1,47 @@
 {
-  "edition": "Midday",
-  "generated": "2026-11-26T17:35:00Z",
-  "title": "Midday Brief — Thu 26 Nov",
+  "edition": "Evening",
+  "generated": "2026-11-26T23:40:00Z",
+  "title": "Evening Brief — Thu 26 Nov",
   "stories": [
     {
-      "board": "Eisenkot signs deal with Golan's party",
-      "headline": "Eisenkot gets closer to forming a new Israeli government",
-      "what": "Gadi Eisenkot made a coalition deal (an agreement to govern together) with Yair Golan's Democrats party. The Democrats get several ministries but dropped their ask for the Justice Ministry.",
-      "why": "If Eisenkot gets 61 of 120 seats, Netanyahu would no longer be prime minister. He still needs more partners.",
-      "sides": "Eisenkot's camp says a new government could start next week; Netanyahu's Likud party now expects Eisenkot to form one without it, and Bennett warned against a rushed minority (too few seats) government.",
+      "board": "Bennett delays Eisenkot meeting until Sunday",
+      "headline": "Eisenkot's new Israeli government is not ready yet",
+      "what": "Three of the four parties against Netanyahu now have deals with Gadi Eisenkot. But Naftali Bennett pushed his meeting with Eisenkot to Sunday and still wants a unity government (all big parties together) with Netanyahu.",
+      "why": "Eisenkot needs 61 of 120 seats to lead, and without Bennett he is still short.",
+      "sides": "Eisenkot wants help from religious and Arab parties; Bennett prefers working with Netanyahu's Likud. No deal with the religious party UTJ yet.",
       "update": true,
       "sources": [
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/bkkxw6hjml" },
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/bk73k3gj7x" },
-        { "name": "Jerusalem Post", "url": "https://www.jpost.com/israel-news/politics-and-diplomacy/article-916196" }
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/sy8epfl17x" }
       ]
     },
     {
-      "board": "Zelenskyy warns big Russian power attack coming",
-      "headline": "Ukraine says Russia is getting ready for a huge strike",
-      "what": "Ukraine's leader Zelenskyy said Russia is almost ready for another big attack on power plants and supplies. Overnight, Russia fired missiles and 113 drones, and crews are fixing power in six regions.",
-      "why": "Winter is starting, and without power many Ukrainians lose heat and light.",
-      "sides": "No major disagreement. A US envoy says peace talks are stuck on who keeps which land.",
+      "board": "Canada study finds worrying campus views on Jews",
+      "headline": "Study of Canadian college students worries Jewish groups",
+      "what": "A government-paid study found two in three non-Jewish students think calling for Israel to stop existing is not antisemitic (hate against Jews). Minister Marc Miller said a report on anti-Jewish hate comes in December.",
+      "why": "Jewish groups say hate on campuses is growing and want action.",
+      "sides": "No major disagreement on the numbers. Some note the government scrapped its special envoy (helper) on antisemitism in June.",
       "update": false,
       "sources": [
-        { "name": "AP via KSAT", "url": "https://www.ksat.com/news/2026/11/26/zelenskyy-warns-of-imminent-major-russian-attack-on-ukraines-power-grid/" },
-        { "name": "Washington Times", "url": "https://washingtontimes.com/news/2026/nov/26/volodymyr-zelenskyy-warns-imminent-major-russian-attack-ukraines" },
-        { "name": "Kyiv Independent", "url": "https://kyivindependent.com/russia-prepares-new-mass-attack-on-ukraines-energy-infrastructure-zelensky-says" }
+        { "name": "Canadian Press via CFJC Today", "url": "https://cfjctoday.com/2026/11/26/advisory-council-to-issue-antisemitism-report-as-jewish-groups-call-out-campus-hate/" }
+      ]
+    },
+    {
+      "board": "SAP may cut 10,000 jobs for AI",
+      "headline": "Big software company SAP may cut at least 10,000 jobs",
+      "what": "Bloomberg reports German company SAP may cut about 9 out of every 100 jobs as it changes to focus on AI (computers that can think and write). SAP has not commented.",
+      "why": "It shows big companies are swapping some jobs for AI.",
+      "sides": "No major disagreement. Reuters says it could not confirm the report on its own yet.",
+      "update": false,
+      "sources": [
+        { "name": "Reuters via Global Banking & Finance", "url": "https://www.globalbankingandfinance.com/sap-considers-least-10-000-job-cuts-ai-restructuring/" },
+        { "name": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-11-26/sap-weighs-cutting-at-least-10-000-positions-in-ai-restructuring" }
       ]
     }
   ],
   "quick_hits": [
-    "For the first time in 100 years, the Macy's Thanksgiving parade in New York was moved because of a storm; it now runs Saturday.",
-    "EU leaders are meeting in Brussels and are split over how to keep paying to help Ukraine."
+    "Conservatives want Diana Fox Carney, the Prime Minister's wife, to tell Parliament about her ocean envoy job; Carney's office says it follows ethics rules.",
+    "PM Carney met Saskatchewan Premier Scott Moe in Regina on Thursday.",
+    "A big US Thanksgiving storm brought floods and wind, and up to 13 inches of snow is expected near St. Louis."
   ],
-  "big_picture": "Israel may be days from a new government, while Ukraine braces for a hard, cold winter."
+  "big_picture": "Israel's new government is still being stitched together, while AI keeps changing who gets hired."
 }
