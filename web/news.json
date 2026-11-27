@@ -1,48 +1,36 @@
 {
-  "edition": "Morning",
-  "generated": "2026-11-27T13:50:00Z",
-  "title": "Morning Brief — Fri 27 Nov",
+  "edition": "Midday",
+  "generated": "2026-11-27T17:40:00Z",
+  "title": "Midday Brief — Fri 27 Nov",
   "stories": [
     {
-      "board": "Supreme Court rules today on Quebec's Bill 21",
-      "headline": "Canada's top court decides on Quebec's religious symbols law",
-      "what": "This morning the Supreme Court of Canada rules on Bill 21. That Quebec law stops some public workers, like teachers and police, from wearing religious symbols such as a kippah, hijab or turban at work.",
-      "why": "Quebec used the notwithstanding clause (a rule that lets a province override some Charter rights), and the ruling could change how all provinces may use it.",
-      "sides": "Quebec's premier and other provinces say the clause is a fair tool for elected lawmakers; rights groups and religious groups who sued say it hurts minorities' freedom.",
-      "update": false,
+      "board": "Supreme Court keeps Quebec's religious symbols law",
+      "headline": "Canada's top court mostly upholds Quebec's Bill 21",
+      "what": "The Supreme Court kept the ban on religious symbols, like a kippah, hijab or turban, for teachers, judges and police. It was close: 4 judges to 3. One part, a ban on face coverings for Quebec lawmakers, was struck down.",
+      "why": "The court said provinces may use the notwithstanding clause (a rule to override some Charter rights) and courts cannot second-guess it, though some judges said courts should still speak up.",
+      "sides": "Quebec defended the law as protecting a neutral state; Muslim groups, school boards and rights groups called the ruling a blow to minorities and vow to keep fighting.",
+      "update": true,
       "sources": [
-        { "name": "Canadian Press via Global News", "url": "https://globalnews.ca/news/12168617/supreme-court-secularism-law-ruling/" },
-        { "name": "The Globe and Mail", "url": "https://www.theglobeandmail.com/canada/article-historic-stakes-in-landmark-supreme-court-ruling-quebec-bill-21/" }
+        { "name": "CTV News / Canadian Press via CP24", "url": "https://www.cp24.com/news/canada/2026/11/27/supreme-court-of-canada-upholds-quebecs-secularism-law/" },
+        { "name": "Toronto Sun via Yahoo News Canada", "url": "https://ca.news.yahoo.com/supreme-court-upholds-quebecs-bill-153424357.html" },
+        { "name": "CBC News", "url": "https://www.cbc.ca/news/canada/montreal/livestory/quebec-bill-21-supreme-court-of-canada-ruling-9.7434446" }
       ]
     },
     {
-      "board": "New Zealand election ends with no winner",
-      "headline": "New Zealand's final count gives no side a majority",
-      "what": "After counting all votes from the Nov 7 election, the right-leaning government has 65 seats and the left side 65 with a new small party, Opportunity. 66 seats are needed to rule.",
-      "why": "A tiny party now picks who leads, and a new government could take weeks.",
-      "sides": "No major disagreement on the count. Opportunity says it will talk to National first, but National's leader ruled that out during the campaign.",
+      "board": "Israel's hospitals on alert for cyberattack",
+      "headline": "Israel warns hospitals of a possible big cyberattack",
+      "what": "Israel's Health Ministry warned hospitals that a coordinated cyberattack (computer hackers breaking into systems) may be coming. Maccabi, a big health provider, blocked access from outside Israel until at least Sunday.",
+      "why": "Hospitals need their computers for patient care, so an attack could slow treatment.",
+      "sides": "No major disagreement. The ministry has not said who might be behind it.",
       "update": false,
       "sources": [
-        { "name": "SBS News", "url": "https://www.sbs.com.au/news/article/new-zealand-election-delivers-a-hung-parliament/sgy08410h" },
-        { "name": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-11-27/new-zealand-s-official-election-results-reveal-hung-parliament" }
-      ]
-    },
-    {
-      "board": "World stocks jump as Wall Street reopens",
-      "headline": "Stock markets rise around the world after Thanksgiving",
-      "what": "Markets in Asia and Europe went up, and US stock futures (early bets on today's prices) rose almost 2 percent. US markets open for a short day and close at 1 p.m.",
-      "why": "Buying in AI companies and help from China for its markets lifted prices, while oil stays high near 98 US dollars a barrel.",
-      "sides": "No major disagreement. AP notes worries about planned new US tariffs (taxes on imports) and tension in the Middle East.",
-      "update": false,
-      "sources": [
-        { "name": "AP via Audacy", "url": "https://www.audacy.com/kdawn/news/business/stock-markets-tariffs-ai-profits-energy-c7ef10c1dbc5fa09668bd4fe0729c613" }
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/health_science/article/ryhuubd1ql" }
       ]
     }
   ],
   "quick_hits": [
-    "Israel: Gadi Eisenkot signed a deal with Yair Golan's party and hopes to finish talks with Naftali Bennett by Saturday night, but his side is still short of 61 seats.",
-    "PM Carney goes to Yellowknife today to announce a big new plan to connect Canada's North.",
-    "Ukraine's President Zelensky warns Russia is planning another big missile attack in the coming days."
+    "Israel: Gadi Eisenkot's side wants to swear in a new government next week, but still needs 61 seats and is pushing the Shas party to join (Ynetnews).",
+    "US stocks rose in a short Black Friday trading day that ends at 1 p.m., led by chip makers, after a rough week."
   ],
-  "big_picture": "Courts, voters and coalitions are deciding who holds power, in Canada, New Zealand and Israel."
+  "big_picture": "Canada's top court said elected lawmakers get the final word on Bill 21, by just one vote."
 }
