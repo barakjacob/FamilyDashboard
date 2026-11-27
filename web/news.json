@@ -1,47 +1,48 @@
 {
-  "edition": "Evening",
-  "generated": "2026-11-26T23:40:00Z",
-  "title": "Evening Brief — Thu 26 Nov",
+  "edition": "Morning",
+  "generated": "2026-11-27T13:50:00Z",
+  "title": "Morning Brief — Fri 27 Nov",
   "stories": [
     {
-      "board": "Bennett delays Eisenkot meeting until Sunday",
-      "headline": "Eisenkot's new Israeli government is not ready yet",
-      "what": "Three of the four parties against Netanyahu now have deals with Gadi Eisenkot. But Naftali Bennett pushed his meeting with Eisenkot to Sunday and still wants a unity government (all big parties together) with Netanyahu.",
-      "why": "Eisenkot needs 61 of 120 seats to lead, and without Bennett he is still short.",
-      "sides": "Eisenkot wants help from religious and Arab parties; Bennett prefers working with Netanyahu's Likud. No deal with the religious party UTJ yet.",
-      "update": true,
+      "board": "Supreme Court rules today on Quebec's Bill 21",
+      "headline": "Canada's top court decides on Quebec's religious symbols law",
+      "what": "This morning the Supreme Court of Canada rules on Bill 21. That Quebec law stops some public workers, like teachers and police, from wearing religious symbols such as a kippah, hijab or turban at work.",
+      "why": "Quebec used the notwithstanding clause (a rule that lets a province override some Charter rights), and the ruling could change how all provinces may use it.",
+      "sides": "Quebec's premier and other provinces say the clause is a fair tool for elected lawmakers; rights groups and religious groups who sued say it hurts minorities' freedom.",
+      "update": false,
       "sources": [
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/sy8epfl17x" }
+        { "name": "Canadian Press via Global News", "url": "https://globalnews.ca/news/12168617/supreme-court-secularism-law-ruling/" },
+        { "name": "The Globe and Mail", "url": "https://www.theglobeandmail.com/canada/article-historic-stakes-in-landmark-supreme-court-ruling-quebec-bill-21/" }
       ]
     },
     {
-      "board": "Canada study finds worrying campus views on Jews",
-      "headline": "Study of Canadian college students worries Jewish groups",
-      "what": "A government-paid study found two in three non-Jewish students think calling for Israel to stop existing is not antisemitic (hate against Jews). Minister Marc Miller said a report on anti-Jewish hate comes in December.",
-      "why": "Jewish groups say hate on campuses is growing and want action.",
-      "sides": "No major disagreement on the numbers. Some note the government scrapped its special envoy (helper) on antisemitism in June.",
+      "board": "New Zealand election ends with no winner",
+      "headline": "New Zealand's final count gives no side a majority",
+      "what": "After counting all votes from the Nov 7 election, the right-leaning government has 65 seats and the left side 65 with a new small party, Opportunity. 66 seats are needed to rule.",
+      "why": "A tiny party now picks who leads, and a new government could take weeks.",
+      "sides": "No major disagreement on the count. Opportunity says it will talk to National first, but National's leader ruled that out during the campaign.",
       "update": false,
       "sources": [
-        { "name": "Canadian Press via CFJC Today", "url": "https://cfjctoday.com/2026/11/26/advisory-council-to-issue-antisemitism-report-as-jewish-groups-call-out-campus-hate/" }
+        { "name": "SBS News", "url": "https://www.sbs.com.au/news/article/new-zealand-election-delivers-a-hung-parliament/sgy08410h" },
+        { "name": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-11-27/new-zealand-s-official-election-results-reveal-hung-parliament" }
       ]
     },
     {
-      "board": "SAP may cut 10,000 jobs for AI",
-      "headline": "Big software company SAP may cut at least 10,000 jobs",
-      "what": "Bloomberg reports German company SAP may cut about 9 out of every 100 jobs as it changes to focus on AI (computers that can think and write). SAP has not commented.",
-      "why": "It shows big companies are swapping some jobs for AI.",
-      "sides": "No major disagreement. Reuters says it could not confirm the report on its own yet.",
+      "board": "World stocks jump as Wall Street reopens",
+      "headline": "Stock markets rise around the world after Thanksgiving",
+      "what": "Markets in Asia and Europe went up, and US stock futures (early bets on today's prices) rose almost 2 percent. US markets open for a short day and close at 1 p.m.",
+      "why": "Buying in AI companies and help from China for its markets lifted prices, while oil stays high near 98 US dollars a barrel.",
+      "sides": "No major disagreement. AP notes worries about planned new US tariffs (taxes on imports) and tension in the Middle East.",
       "update": false,
       "sources": [
-        { "name": "Reuters via Global Banking & Finance", "url": "https://www.globalbankingandfinance.com/sap-considers-least-10-000-job-cuts-ai-restructuring/" },
-        { "name": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-11-26/sap-weighs-cutting-at-least-10-000-positions-in-ai-restructuring" }
+        { "name": "AP via Audacy", "url": "https://www.audacy.com/kdawn/news/business/stock-markets-tariffs-ai-profits-energy-c7ef10c1dbc5fa09668bd4fe0729c613" }
       ]
     }
   ],
   "quick_hits": [
-    "Conservatives want Diana Fox Carney, the Prime Minister's wife, to tell Parliament about her ocean envoy job; Carney's office says it follows ethics rules.",
-    "PM Carney met Saskatchewan Premier Scott Moe in Regina on Thursday.",
-    "A big US Thanksgiving storm brought floods and wind, and up to 13 inches of snow is expected near St. Louis."
+    "Israel: Gadi Eisenkot signed a deal with Yair Golan's party and hopes to finish talks with Naftali Bennett by Saturday night, but his side is still short of 61 seats.",
+    "PM Carney goes to Yellowknife today to announce a big new plan to connect Canada's North.",
+    "Ukraine's President Zelensky warns Russia is planning another big missile attack in the coming days."
   ],
-  "big_picture": "Israel's new government is still being stitched together, while AI keeps changing who gets hired."
+  "big_picture": "Courts, voters and coalitions are deciding who holds power, in Canada, New Zealand and Israel."
 }
