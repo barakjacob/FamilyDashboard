@@ -1,60 +1,60 @@
 {
-  "edition": "Evening",
-  "generated": "2026-11-27T23:40:00Z",
-  "title": "Evening Brief — Fri 27 Nov",
+  "edition": "Morning",
+  "generated": "2026-11-28T13:45:00Z",
+  "title": "Morning Brief — Sat 28 Nov",
   "stories": [
     {
-      "board": "Eisenkot says new Israeli government within 8 days",
-      "headline": "Eisenkot races the clock to form Israel's next government",
-      "what": "Gadi Eisenkot has 8 days left to build a coalition (a team of parties with a majority). He says he will not ask for more time. Yair Golan's Democrats signed a deal to join him, but Naftali Bennett has not yet.",
-      "why": "Whoever forms the government becomes Israel's next leader.",
-      "sides": "Eisenkot accuses Likud of stalling the talks; Netanyahu is reportedly weighing a rotation (taking turns as prime minister), with Netanyahu going second.",
-      "update": true,
+      "board": "Russia says it shot down 1,246 Ukrainian drones",
+      "headline": "Russia says it stopped a huge overnight drone attack from Ukraine",
+      "what": "Russia's army says it shot down 1,246 Ukrainian drones overnight, with more than 400 sent toward Moscow. A drone hit a bus in the Bryansk region and hurt nine people.",
+      "why": "It would be one of the biggest drone attacks of the war, and it shows Ukraine can now hit deep inside Russia.",
+      "sides": "No major disagreement. The numbers come only from Russia and have not been checked by anyone else; Ukraine has not commented on them.",
+      "update": false,
       "sources": [
-        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/rji33zv17g" }
+        { "name": "RTE (Reuters)", "url": "https://www.rte.ie/news/ukraine/2026/1128/1600998-ukraine-russia/" },
+        { "name": "TheJournal.ie", "url": "https://www.thejournal.ie/russian-say-over-1200-ukrainian-drones-shot-down-in-new-night-time-attack-7241292-Nov2026/" }
       ]
     },
     {
-      "board": "Pakistan and Turkey back Saudis against Houthis",
-      "headline": "Pakistan and Turkey promise to help Saudi Arabia against Houthi attacks",
-      "what": "Leaders from the three countries met in Pakistan under their Mecca defense pact (a promise to protect each other). They condemned attacks on Saudi Arabia by the Houthis, a rebel group in Yemen backed by Iran. Turkey finished approving the pact on Friday.",
-      "why": "Two big military powers are now formally tied to Saudi Arabia's safety, which could change the balance in the Middle East.",
-      "sides": "No major disagreement. Pakistan and Turkey say the pact is only for defense, and Turkey says it will not send troops to fight in Yemen.",
+      "board": "OpenAI sues Apple back over stolen secrets claim",
+      "headline": "OpenAI fights back against Apple in court",
+      "what": "Apple sued OpenAI earlier this year, saying ex-Apple workers took secrets to help OpenAI build devices. On Friday OpenAI sued back, saying Apple pressured suppliers (companies that make parts) not to work with OpenAI.",
+      "why": "OpenAI, the maker of ChatGPT, is starting to build gadgets, so it is turning into a direct rival to Apple.",
+      "sides": "Not a left-right story: OpenAI calls Apple's lawsuit a trap to slow rivals, and Apple calls the countersuit a way to distract from the real case.",
       "update": false,
       "sources": [
-        { "name": "AP via WFTV", "url": "https://www.wftv.com/news/world/pakistan-set-host/WQIIFTN6SAYZ3OTX3TB6V6R7PU/" },
-        { "name": "US News (Reuters)", "url": "https://www.usnews.com/news/world/articles/2026-11-27/pakistan-set-to-host-talks-with-saudi-arabia-and-turkey-under-trilateral-defense-pact" }
+        { "name": "CBS News", "url": "https://www.cbsnews.com/news/openai-countersues-apple-trade-secrets-lawsuit/" },
+        { "name": "CNN", "url": "https://www.cnn.com/2026/11/27/tech/openai-apple-countersuit" }
       ]
     },
     {
-      "board": "Nine Ukrainian kids home with Melania Trump's help",
-      "headline": "Nine Ukrainian children returned from Russia with help from Melania Trump",
-      "what": "Nine children taken to Russia or Russian-held land went back to their families in Ukraine. President Zelensky said Melania Trump helped mediate (talk between both sides to reach a deal).",
-      "why": "Ukraine says thousands of its children were taken during the war, so every return matters.",
-      "sides": "No major disagreement on the facts; right-leaning outlets stress her quiet work and say she gets little credit for it.",
+      "board": "Report finds antisemitism unchecked on Canadian campuses",
+      "headline": "Government report says many Canadian students shrug off antisemitism",
+      "what": "A report paid for by the federal government surveyed non-Jewish university students. More than half said protesting outside synagogues or boycotting (refusing to buy from) Jewish-owned shops is not antisemitism (hatred of Jews). It makes 12 suggestions, like more protection for Jewish students.",
+      "why": "Jewish students in Canada say they feel unsafe on campus, and this report backs up their worries with numbers.",
+      "sides": "No major disagreement among leaders: Culture Minister Marc Miller called the attitudes wrong, and B'nai Brith called the findings deeply disturbing.",
       "update": false,
       "sources": [
-        { "name": "Kyiv Independent", "url": "https://kyivindependent.com/9-ukrainian-children-returned-from-russian-occupied-territories-russia-through-melania-trumps-mediation-zelensky-says/" },
-        { "name": "The Hill", "url": "https://thehill.com/policy/international/6242437-melania-trump-reunites-children-russia-ukraine/" }
+        { "name": "CTV News via CP24", "url": "https://www.cp24.com/news/canada/2026/11/27/i-just-existed-as-a-jewish-and-israeli-student-antisemitism-unchecked-on-campuses-report-finds/" },
+        { "name": "JNS", "url": "https://www.jns.org/news/antisemitism/bnai-brith-calls-on-canadian-universities-to-act-after-new-campus-antisemitism-report" }
       ]
     },
     {
-      "board": "Freedom founder fights Quebecor's $31B Telus bid",
-      "headline": "Fight grows over Quebecor's $31 billion offer to buy Telus",
-      "what": "Quebecor, which owns Freedom Mobile, offered about $31 billion to buy Telus. Freedom's founder, Anthony Lacavera, called the deal a disaster and wants to buy Freedom back to keep it separate.",
-      "why": "If the deal goes through, Canada would have three big phone companies instead of four, and experts warn bills could go up.",
-      "sides": "Not a left-right split: Quebecor wants to grow bigger, while consumer groups and Lacavera worry about less competition. Regulators (government watchdogs) are watching.",
+      "board": "NBC pulls anti-Israel ad after Jewish groups object",
+      "headline": "NBC stops showing an anti-Israel ad that aired during SNL",
+      "what": "A pro-Palestinian group paid for a 30-second ad shown during a Thanksgiving Saturday Night Live broadcast. Jewish groups called it antisemitic, and NBC said it will stop airing it and review how it approves ads.",
+      "why": "It shows the fight over Israel and Gaza is still spilling into big American TV networks.",
+      "sides": "Jewish groups called the ad hateful and want an on-air apology; the ad itself argues the US should stop sending money to Israel.",
       "update": false,
       "sources": [
-        { "name": "Global News", "url": "https://globalnews.ca/news/12169150/freedom-mobile-quebecor-telus-possible-merge/" },
-        { "name": "CBC News", "url": "https://www.cbc.ca/news/business/quebecor-telus-proposal-could-mean-higher-bills-experts-9.7425945" }
+        { "name": "Ynetnews", "url": "https://www.ynetnews.com/article/h1cr11b001qg" }
       ]
     }
   ],
   "quick_hits": [
-    "US stocks closed higher in the short Black Friday session; the tech-heavy Nasdaq 100 fund rose about 2.7 percent.",
-    "Brazil's markets jumped after President Lula picked banker Luiz Carlos Trabuco as finance minister (the person in charge of the country's money).",
-    "Hamas says the last surviving son of its leader Khalil al-Hayya lived through an Israeli airstrike in Gaza; Israel's army had no comment (Ynetnews)."
+    "US stocks had their best week since April 2025, with the S&P 500 up 5.6 percent, led by chip and AI companies (AP).",
+    "US regulators closed United Fidelity Bank in Indiana, the biggest US bank failure since 2024; First Citizens took over its deposits, so customers keep their money.",
+    "Tens of thousands marched in France, Italy, Portugal and Germany over high living costs and housing prices."
   ],
-  "big_picture": "Deals ruled the day: a coalition race in Israel, a defense pact in the Middle East, and a phone mega-merger fight in Canada."
+  "big_picture": "Fights everywhere this morning: drones over Moscow, AI giants in court, and hard questions about antisemitism in Canada and the US."
 }
